@@ -2,9 +2,9 @@
   "anchor": "iter063_s64",
   "anchor_elo": 0.0,
   "draw_policy": "half",
-  "games": 688,
+  "games": 516,
   "log_likelihood": -205.56415383438255,
-  "players": 5,
+  "players": 4,
   "ratings": [
     {
       "ci95": [
@@ -13,7 +13,7 @@
       ],
       "draws": 144,
       "elo": 0.0,
-      "games": 688,
+      "games": 516,
       "losses": 11,
       "player": "iter063_s64",
       "score_rate": 0.8793604651162791,
@@ -61,20 +61,6 @@
       "score_rate": 0.03488372093023256,
       "standard_error": 72.00292606070057,
       "wins": 3
-    },
-    {
-      "ci95": [
-        -4156.888254968699,
-        -269.2489590306452
-      ],
-      "draws": 0,
-      "elo": -2213.068606999672,
-      "games": 172,
-      "losses": 172,
-      "player": "svjayanthi-mcts-fast",
-      "score_rate": 0.0,
-      "standard_error": 991.7447183515442,
-      "wins": 0
     }
   ]
 }

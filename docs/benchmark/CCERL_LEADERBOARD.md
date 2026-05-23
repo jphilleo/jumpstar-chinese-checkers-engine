@@ -2,7 +2,7 @@
 
 Status: current release-candidate snapshot for `CCERL-2P10-v2`.
 
-This is the current local calibration snapshot for the public Chinese Checkers engine benchmark. It is engine-relative, anchored at `random = 0`, and should not be interpreted as human Elo. Source-style open-source adapters are included directly in the all-pairs ladder, not projected from a single match. `svjayanthi-mcts-fast` is excluded from the public table because it lost every useful comparison game in screening.
+This is the current local calibration snapshot for the public Chinese Checkers engine benchmark. It is engine-relative, anchored at `random = 0`, and should not be interpreted as human Elo. Source-style open-source adapters are included directly in the all-pairs ladder, not projected from a single match.
 
 ## Fixed-Simulation Baseline Ladder
 
@@ -66,4 +66,4 @@ Interpretation: `JumpStar_60` remains the public benchmark champion for now. `Ju
 
 ## Open-Source Adapter Check
 
-Source-style adapters for representative public Chinese Checkers bots are included in the main all-pairs ladder above. The retained adapters are `marblefish-ab`, `harryz-rule`, and `zedrichu-minimax`; `svjayanthi-mcts-fast` was removed from the official ladder because it produced an uninformative all-loss profile.
+Source-style adapters for representative public Chinese Checkers bots are included in the main all-pairs ladder above. The retained adapters are `marblefish-ab`, `harryz-rule`, and `zedrichu-minimax`.

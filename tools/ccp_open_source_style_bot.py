@@ -471,8 +471,6 @@ def choose_move(args: argparse.Namespace, cells: str, player: int, rng: random.R
         return choose_alphabeta(cells, player, args.depth, marblefish_score, beam=args.beam)
     if args.style == "harryz-rule":
         return choose_rule_path(cells, player)
-    if args.style in {"svjayanthi-mcts", "svjayanthi-mcts-fast"}:
-        return choose_mcts(cells, player, rng, args.iterations, args.rollout_depth)
     raise RuntimeError(f"unknown style: {args.style}")
 
 
@@ -480,7 +478,7 @@ def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument(
         "--style",
-        choices=("zedrichu-minimax", "marblefish-ab", "harryz-rule", "svjayanthi-mcts", "svjayanthi-mcts-fast"),
+        choices=("zedrichu-minimax", "marblefish-ab", "harryz-rule"),
         required=True,
     )
     parser.add_argument("--name")

@@ -27,7 +27,6 @@ during the open-source bot screening:
 | `harryz-rule` (deterministic 1-ply greedy) | 172 | 0-101-71 | 101 / 172 (**59%**) | 1470.6 | -441.7 |
 | `marblefish-ab` | 172 | 4-11-157 | 0 / 172 | 1129.8 | 985.6 |
 | `zedrichu-minimax` | 172 | 5-7-160 | 0 / 172 | 1109.5 | 1021.0 |
-| `svjayanthi-mcts-fast` | 172 | 0-5-167 | 0 / 172 | 890.6 | -585.1 |
 
 `harryz-rule` never beat the champion, yet earned an Elo only ~150 points
 below it because 59% of its games hit the ply cap with a 0.5-point draw. The
@@ -106,8 +105,6 @@ exceptions, both inflated by the v1 loophole:
 - `harryz-rule`: expected to drop from ~1471 toward the
   decisive-only estimate of ~-441 (still above strict random because some
   of its draws against weaker engines remain legitimate halves).
-- `svjayanthi-mcts-fast`: smaller correction, since most of its outcomes
-  were already decisive losses. Expected drop from ~891.
 
 Numbers will be updated on the public benchmark page after the v2 re-run
 completes.

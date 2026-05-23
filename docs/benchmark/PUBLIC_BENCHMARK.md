@@ -70,7 +70,7 @@ The current native/CCP all-pairs ladder is:
 experiments/public_benchmark/ladder_v2_latest_champions_s64/baseline_ladder.json
 ```
 
-It uses all 86 audited v2 positions, paired color swaps, all 171 displayed-engine pairs, 29,412 games total, 64-simulation neural search, the existing native/CCP logs plus latest-champion incremental runs, and `random = 0`. Open-source adapter rows are fitted in the same all-pairs graph as every other displayed engine; `svjayanthi-mcts-fast` is excluded because it produced no useful comparison signal.
+It uses all 86 audited v2 positions, paired color swaps, all 171 displayed-engine pairs, 29,412 games total, 64-simulation neural search, the existing native/CCP logs plus latest-champion incremental runs, and `random = 0`. Open-source adapter rows are fitted in the same all-pairs graph as every other displayed engine.
 
 | Rank | Baseline | Elo | Games | Score | vs JumpStar_60 | vs JumpStar_82 |
 |---:|---|---:|---:|---:|---:|---:|

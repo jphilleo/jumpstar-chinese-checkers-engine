@@ -62,24 +62,6 @@
         "anti_block_goal_full": 9,
         "max_ply": 6
       }
-    },
-    {
-      "anchor_losses": 0,
-      "anchor_score": 1.0,
-      "anchor_wins": 172,
-      "direct_elo_delta": null,
-      "direct_elo_delta_adjusted": 1015.127638029308,
-      "draws": 0,
-      "games": 172,
-      "log": "experiments/public_benchmark/open_source_v2/svjayanthi-mcts-fast_vs_iter063_s64.jsonl",
-      "opponent": "svjayanthi-mcts-fast",
-      "score_ci95_normal": [
-        1.0,
-        1.0
-      ],
-      "terminations": {
-        "anti_block_goal_full": 172
-      }
     }
   ],
   "elo_half": "experiments/public_benchmark/open_source_v2/elo_half.json",

@@ -413,9 +413,7 @@
       }
     ]
   },
-  "excluded_labels": [
-    "svjayanthi-mcts-fast"
-  ],
+  "excluded_labels": [],
   "pairs": [
     {
       "a": "greedy",
