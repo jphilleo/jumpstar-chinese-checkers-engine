@@ -1,0 +1,68 @@
+{
+  "artifacts": {
+    "elo": "experiments/public_benchmark/champion_match_iter063_vs_iter060_s768_c24_v2/elo_delta.json",
+    "games": "experiments/public_benchmark/champion_match_iter063_vs_iter060_s768_c24_v2/games.jsonl",
+    "markdown": "experiments/public_benchmark/champion_match_iter063_vs_iter060_s768_c24_v2/champion_match.md",
+    "native_log": "experiments/public_benchmark/champion_match_iter063_vs_iter060_s768_c24_v2/native/iter063_vs_iter060.jsonl",
+    "sprt": "experiments/public_benchmark/champion_match_iter063_vs_iter060_s768_c24_v2/sprt.json"
+  },
+  "candidate": "iter063",
+  "champion": "iter060",
+  "direct": {
+    "draws": 960,
+    "games": 4128,
+    "losses": 1752,
+    "points": 1896.0,
+    "score": 0.45930232558139533,
+    "score_ci95": [
+      0.4441447636702658,
+      0.4745355652174631
+    ],
+    "wins": 1416
+  },
+  "elo_delta": {
+    "anchor": "iter060",
+    "ci95": [
+      -38.97636515256134,
+      -17.708320658068036
+    ],
+    "elo": -28.342342905314688,
+    "standard_error": 5.42552155471768
+  },
+  "protocol": {
+    "color_swap": true,
+    "cycles": 24,
+    "expanded_positions": "experiments/public_benchmark/champion_match_iter063_vs_iter060_s768_c24_v2/positions.direct_match.jsonl",
+    "games": 4128,
+    "max_plies": 240,
+    "paired_starts": 2064,
+    "positions": "benchmarks/ccerl-v1/positions/official_elo_v2.jsonl",
+    "runner": "native_match_suite",
+    "seed": 990000,
+    "simulations": 768,
+    "source_positions": 86,
+    "target_games": 1000,
+    "workers": 8
+  },
+  "schema": "ccerl.champion_match.v1",
+  "sprt": {
+    "alpha": 0.05,
+    "beta": 0.05,
+    "candidate": "iter063",
+    "decision": "accept_h0",
+    "draws": 960,
+    "elo0": 0.0,
+    "elo1": 25.0,
+    "expected_score_h0": 0.5,
+    "expected_score_h1": 0.5359159269451023,
+    "games": 4128,
+    "llr": -34.85457264952741,
+    "losses": 1752,
+    "lower_bound": -2.9444389791664403,
+    "opponent": "iter060",
+    "schema": "ccerl.sprt_decision.v1",
+    "score": 0.45930232558139533,
+    "upper_bound": 2.9444389791664403,
+    "wins": 1416
+  }
+}

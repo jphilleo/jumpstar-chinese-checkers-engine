@@ -1,0 +1,85 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CCZero multiplayer training position v1",
+  "type": "object",
+  "required": [
+    "type",
+    "schema",
+    "game_id",
+    "ply",
+    "player_count",
+    "player",
+    "seat",
+    "seat_order",
+    "hash",
+    "cells",
+    "bot",
+    "rule_profile",
+    "placements",
+    "score_vector",
+    "result_vector",
+    "chosen",
+    "legal_count",
+    "legal"
+  ],
+  "properties": {
+    "type": {"const": "training_position"},
+    "schema": {"const": "cczero.training.mp.v1"},
+    "game_id": {"type": "integer"},
+    "ply": {"type": "integer", "minimum": 0},
+    "player_count": {"type": "integer", "enum": [3, 4, 6]},
+    "player": {"type": "integer", "minimum": 0, "maximum": 5},
+    "seat": {"type": "integer", "minimum": 0, "maximum": 5},
+    "seat_order": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 6,
+      "items": {"type": "integer", "minimum": 0, "maximum": 5}
+    },
+    "hash": {"type": "string", "pattern": "^0x[0-9a-fA-F]{16}(:[A-Za-z0-9_.-]+)?$"},
+    "cells": {"type": "string", "minLength": 121, "maxLength": 121, "pattern": "^[.012345]{121}$"},
+    "bot": {"type": "string"},
+    "rule_profile": {"type": "string", "enum": ["CCZ-121-MP3-v1", "CCZ-121-MP4-v1", "CCZ-121-MP6-v1"]},
+    "placements": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 6,
+      "items": {"type": "integer", "minimum": 1, "maximum": 6}
+    },
+    "score_vector": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 6,
+      "items": {"type": "number", "minimum": 0, "maximum": 1}
+    },
+    "result_vector": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 6,
+      "items": {"type": "number", "minimum": 0, "maximum": 1}
+    },
+    "phase": {"type": "integer"},
+    "chosen": {"$ref": "#/$defs/move"},
+    "legal_count": {"type": "integer", "minimum": 1},
+    "legal": {
+      "type": "array",
+      "minItems": 1,
+      "items": {"$ref": "#/$defs/move"}
+    }
+  },
+  "$defs": {
+    "move": {
+      "type": "object",
+      "required": ["from", "to", "path"],
+      "properties": {
+        "from": {"type": "integer", "minimum": 0, "maximum": 120},
+        "to": {"type": "integer", "minimum": 0, "maximum": 120},
+        "path": {
+          "type": "array",
+          "minItems": 2,
+          "items": {"type": "integer", "minimum": 0, "maximum": 120}
+        }
+      }
+    }
+  }
+}

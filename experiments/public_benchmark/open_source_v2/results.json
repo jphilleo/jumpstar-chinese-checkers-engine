@@ -1,0 +1,87 @@
+{
+  "anchor": "iter063_s64",
+  "anchor_elo": 0.0,
+  "by_opponent": [
+    {
+      "anchor_losses": 0,
+      "anchor_score": 0.7180232558139535,
+      "anchor_wins": 75,
+      "direct_elo_delta": 162.37008759736838,
+      "direct_elo_delta_adjusted": 161.29024205348856,
+      "draws": 97,
+      "games": 172,
+      "log": "experiments/public_benchmark/open_source_v2/harryz-rule_vs_iter063_s64.jsonl",
+      "opponent": "harryz-rule",
+      "score_ci95_normal": [
+        0.6808598016806999,
+        0.7551867099472072
+      ],
+      "terminations": {
+        "all_pieces_in_goal": 7,
+        "anti_block_goal_full": 68,
+        "max_ply": 97
+      }
+    },
+    {
+      "anchor_losses": 8,
+      "anchor_score": 0.8343023255813954,
+      "anchor_wins": 123,
+      "direct_elo_delta": 280.8028164246004,
+      "direct_elo_delta_adjusted": 278.38579767851746,
+      "draws": 41,
+      "games": 172,
+      "log": "experiments/public_benchmark/open_source_v2/marblefish-ab_vs_iter063_s64.jsonl",
+      "opponent": "marblefish-ab",
+      "score_ci95_normal": [
+        0.7922679664376885,
+        0.8763366847251023
+      ],
+      "terminations": {
+        "all_pieces_in_goal": 107,
+        "anti_block_goal_full": 24,
+        "equal_turn_goal_draw": 4,
+        "max_ply": 37
+      }
+    },
+    {
+      "anchor_losses": 3,
+      "anchor_score": 0.9651162790697675,
+      "anchor_wins": 163,
+      "direct_elo_delta": 576.7827350625648,
+      "direct_elo_delta_adjusted": 563.4003524797932,
+      "draws": 6,
+      "games": 172,
+      "log": "experiments/public_benchmark/open_source_v2/zedrichu-minimax_vs_iter063_s64.jsonl",
+      "opponent": "zedrichu-minimax",
+      "score_ci95_normal": [
+        0.9414430363906112,
+        0.9887895217489238
+      ],
+      "terminations": {
+        "all_pieces_in_goal": 157,
+        "anti_block_goal_full": 9,
+        "max_ply": 6
+      }
+    },
+    {
+      "anchor_losses": 0,
+      "anchor_score": 1.0,
+      "anchor_wins": 172,
+      "direct_elo_delta": null,
+      "direct_elo_delta_adjusted": 1015.127638029308,
+      "draws": 0,
+      "games": 172,
+      "log": "experiments/public_benchmark/open_source_v2/svjayanthi-mcts-fast_vs_iter063_s64.jsonl",
+      "opponent": "svjayanthi-mcts-fast",
+      "score_ci95_normal": [
+        1.0,
+        1.0
+      ],
+      "terminations": {
+        "anti_block_goal_full": 172
+      }
+    }
+  ],
+  "elo_half": "experiments/public_benchmark/open_source_v2/elo_half.json",
+  "schema": "ccerl.open_source_ccp_summary.v1"
+}

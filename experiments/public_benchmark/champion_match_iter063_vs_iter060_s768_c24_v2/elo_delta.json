@@ -1,0 +1,38 @@
+{
+  "anchor": "iter060",
+  "anchor_elo": 0.0,
+  "draw_policy": "half",
+  "games": 4128,
+  "log_likelihood": -2847.62200329044,
+  "players": 2,
+  "ratings": [
+    {
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "draws": 960,
+      "elo": 0.0,
+      "games": 4128,
+      "losses": 1416,
+      "player": "iter060",
+      "score_rate": 0.5406976744186046,
+      "standard_error": 0.0,
+      "wins": 1752
+    },
+    {
+      "ci95": [
+        -38.97636515256134,
+        -17.708320658068036
+      ],
+      "draws": 960,
+      "elo": -28.342342905314688,
+      "games": 4128,
+      "losses": 1752,
+      "player": "iter063",
+      "score_rate": 0.45930232558139533,
+      "standard_error": 5.42552155471768,
+      "wins": 1416
+    }
+  ]
+}

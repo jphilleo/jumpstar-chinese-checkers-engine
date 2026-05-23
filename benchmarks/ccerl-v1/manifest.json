@@ -1,0 +1,131 @@
+{
+  "id": "ccerl-2p10-v1",
+  "status": "audited-suite-v2-iter060-native-suite-ladder",
+  "ruleset": "CCERL-2P10-v1",
+  "engine_rule_profile": "strict",
+  "champion": {
+    "label": "iter060",
+    "model": "experiments/fresh_selfplay_alpha/champions/iter_060_fresh_iter058_1p8m_epoch003/model.ccpv",
+    "ratings": "experiments/fresh_selfplay_alpha/champions/iter_060_fresh_iter058_1p8m_epoch003/ratings.json",
+    "metrics": "experiments/fresh_selfplay_alpha/champions/iter_060_fresh_iter058_1p8m_epoch003/metrics.json",
+    "previous_public_benchmark": {
+      "label": "iter057",
+      "model": "experiments/fresh_selfplay_alpha/champions/iter_057_fresh_iter056_endgame_deep_epoch004/model.ccpv",
+      "ratings": "experiments/fresh_selfplay_alpha/champions/iter_057_fresh_iter056_endgame_deep_epoch004/ratings.json",
+      "metrics": "experiments/fresh_selfplay_alpha/champions/iter_057_fresh_iter056_endgame_deep_epoch004/metrics.json"
+    }
+  },
+  "match_protocol": {
+    "games_per_color_default": 64,
+    "total_games_per_pair_default": 128,
+    "position_schedule": "benchmarks/ccerl-v1/positions/official_elo_v2.jsonl",
+    "seed": 960000,
+    "paired_positions": true,
+    "legacy_opening_random_plies": 8,
+    "initial_position_fraction": 0.2,
+    "max_plies": 240,
+    "simulations": 768,
+    "movegen": "bitboard",
+    "inference_backend": "auto",
+    "inference_batch_size": 64
+  },
+  "position_suite": {
+    "path": "benchmarks/ccerl-v1/positions/official_elo_v2.jsonl",
+    "report": "benchmarks/ccerl-v1/positions/official_elo_v2.report.json",
+    "schema": "ccerl.position.v1",
+    "records": 86,
+    "status": "frozen-audited-v2",
+    "initial_records": 26,
+    "opening_records": 60,
+    "audit": {
+      "min_audits_per_row": 2,
+      "max_side_bias": 0.25,
+      "selected_from": "benchmarks/ccerl-v1/positions/official_elo.jsonl",
+      "reports": [
+        "experiments/public_benchmark/native_suite_audit_iter057_fresh046_s704_limit64/suite_audit.json",
+        "experiments/public_benchmark/native_suite_audit_iter057_ttpvs_s704_limit64/suite_audit.json",
+        "experiments/public_benchmark/native_suite_audit_iter057_fresh046_s704_offset64_limit64/suite_audit.json",
+        "experiments/public_benchmark/native_suite_audit_iter057_ttpvs_s704_offset64_limit64/suite_audit.json"
+      ]
+    },
+    "legacy_v1": {
+      "path": "benchmarks/ccerl-v1/positions/official_elo.jsonl",
+      "report": "benchmarks/ccerl-v1/positions/official_elo.report.json",
+      "records": 128
+    },
+    "generation_seed": 960000,
+    "source_depths": [4, 8, 12, 16, 24],
+    "source_families": [
+      "random:random",
+      "greedy:traffic-greedy",
+      "traffic-greedy:converter",
+      "converter:tt-pvs",
+      "beam:pvs",
+      "pvs:converter"
+    ],
+    "phases": {
+      "initial": 26,
+      "shallow": 7,
+      "normal": 20,
+      "early_midgame": 33
+    }
+  },
+  "baselines": {
+    "path": "benchmarks/ccerl-v1/baselines.json",
+    "baseline_pack": {
+      "manifest": "benchmarks/ccerl-v1/baseline_pack/PACK_MANIFEST.json",
+      "engines": "benchmarks/ccerl-v1/baseline_pack/engines.json",
+      "readme": "benchmarks/ccerl-v1/baseline_pack/README.md"
+    },
+    "schema": "ccerl.baselines.v1",
+    "algorithmic": ["random", "greedy", "traffic-greedy", "converter", "tt-pvs"],
+    "neural": ["fresh005", "fresh009", "fresh029", "fresh046", "iter057", "iter060"],
+    "elo_anchor": {
+      "label": "random",
+      "elo": 0
+    },
+    "champion": "iter060",
+    "native_calibration": {
+      "path": "experiments/public_benchmark/native_baseline_ladder_v2_allpairs_s704_limit12_iter060_suite_random0/baseline_ladder.json",
+      "positions": "benchmarks/ccerl-v1/positions/official_elo_v2.jsonl",
+      "position_limit": 12,
+      "pairs": "all",
+      "games": 1320,
+      "simulations": 704,
+      "runner": "native_match_suite",
+      "anchor": {
+        "label": "random",
+        "elo": 0
+      },
+      "decisive_only_sensitivity": "experiments/public_benchmark/native_baseline_ladder_v2_allpairs_s704_limit12_iter060_suite_random0/elo_decisive_only.json",
+      "sprt_iter060_vs_iter057": "experiments/public_benchmark/native_baseline_ladder_v2_allpairs_s704_limit12_iter060_suite_random0/sprt_iter060_vs_iter057_elo0_0_elo1_25.json",
+      "champion_direct_match": "experiments/public_benchmark/champion_match_iter060_vs_iter057_s704_c24/champion_match.json",
+      "previous_calibration": "experiments/public_benchmark/native_baseline_ladder_v2_allpairs_s704_limit8_random0/baseline_ladder.json"
+    },
+    "runner_spotcheck": {
+      "path": "experiments/public_benchmark/runner_spotcheck_v2_iter060_s64_limit2/runner_spotcheck.json",
+      "positions": "benchmarks/ccerl-v1/positions/official_elo_v2.jsonl",
+      "position_limit": 2,
+      "simulations": 64,
+      "pairs": [
+        "iter060:iter057",
+        "iter060:fresh046",
+        "iter057:fresh046",
+        "tt-pvs:converter",
+        "greedy:random"
+      ],
+      "pass": true
+    }
+  },
+  "schedule": {
+    "color_swap": "each position is played once with engine A as player 0 and once with engine B as player 0",
+    "clean_start_rows": "explicit duplicate rows in the JSONL schedule preserve the 20% clean-start floor",
+    "partial_runs": "position rows are interleaved so prefix limits include multiple phases"
+  },
+  "known_next_gaps": [
+    "run a full 86-row all-pairs calibration once hosted compute is available",
+    "publish hosted neural checkpoint downloads from the staged artifact bundle",
+    "publish hosted leaderboard pages with downloadable JSONL logs",
+    "publish a larger legality/perft suite beyond the existing core fixtures"
+  ]
+}

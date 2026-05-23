@@ -1,0 +1,170 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CCZero self-play position v1",
+  "type": "object",
+  "required": [
+    "type",
+    "schema",
+    "game_id",
+    "seed",
+    "ply",
+    "player",
+    "hash",
+    "cells",
+    "model_id",
+    "rule_profile",
+    "result",
+    "chosen",
+    "legal_count",
+    "visit_sum",
+    "search",
+    "stats",
+    "legal"
+  ],
+  "properties": {
+    "type": {"const": "selfplay_position"},
+    "schema": {"const": "cczero.selfplay.v1"},
+    "game_id": {"type": "integer"},
+    "seed": {"type": "integer"},
+    "ply": {"type": "integer", "minimum": 0},
+    "player": {"type": "integer", "enum": [0, 1]},
+    "hash": {"type": "string", "pattern": "^0x[0-9a-fA-F]{16}(:[A-Za-z0-9_.-]+)?$"},
+    "cells": {"type": "string", "minLength": 121, "maxLength": 121, "pattern": "^[.01]{121}$"},
+    "model_id": {"type": "string"},
+    "target_model_id": {"type": "string"},
+    "rule_profile": {"type": "string"},
+    "result": {"type": "integer", "enum": [-1, 0, 1]},
+    "source_iter": {"type": "integer", "minimum": 0},
+    "target_age": {"type": "integer", "minimum": 0},
+    "requested_simulations": {"type": "integer", "minimum": 0},
+    "actual_simulations": {"type": "integer", "minimum": 0},
+    "search_config_hash": {"type": "string"},
+    "target_model_strength_tier": {"type": "string"},
+    "trusted_target": {"type": "boolean"},
+    "finish_margin_moves": {"type": "integer", "minimum": 0},
+    "finish_margin_max_moves": {"type": "integer", "minimum": 0},
+    "finish_margin_capped": {"type": "boolean"},
+    "score_margin": {"type": "number", "minimum": -1, "maximum": 1},
+    "score_margin_source": {"type": "string"},
+    "root_q": {"type": "number", "minimum": -1, "maximum": 1},
+    "root_q_source": {"type": "string"},
+    "chosen": {"$ref": "#/$defs/move"},
+    "legal_count": {"type": "integer", "minimum": 1},
+    "visit_sum": {"type": "integer", "minimum": 0},
+    "search": {"$ref": "#/$defs/search"},
+    "stats": {"$ref": "#/$defs/stats"},
+    "legal": {
+      "type": "array",
+      "minItems": 1,
+      "items": {"$ref": "#/$defs/root_move"}
+    }
+  },
+  "$defs": {
+    "move": {
+      "type": "object",
+      "required": ["from", "to", "path"],
+      "properties": {
+        "from": {"type": "integer", "minimum": 0, "maximum": 120},
+        "to": {"type": "integer", "minimum": 0, "maximum": 120},
+        "path": {
+          "type": "array",
+          "minItems": 2,
+          "items": {"type": "integer", "minimum": 0, "maximum": 120}
+        }
+      }
+    },
+    "root_move": {
+      "allOf": [
+        {"$ref": "#/$defs/move"},
+        {
+          "type": "object",
+          "required": ["visits", "policy_target", "prior", "q"],
+          "properties": {
+            "visits": {"type": "integer", "minimum": 0},
+            "policy_target": {"type": "number", "minimum": 0, "maximum": 1},
+            "prior": {"type": "number", "minimum": 0, "maximum": 1},
+            "q": {"type": "number", "minimum": -1, "maximum": 1}
+          }
+        }
+      ]
+    },
+    "search": {
+      "type": "object",
+      "required": [
+        "simulations",
+        "cpuct",
+        "root_noise",
+        "root_dirichlet_alpha",
+        "root_noise_fraction",
+        "temperature",
+        "draw_leaf_value",
+        "anti_draw_logit_scale",
+        "transpositions",
+        "reuse_tree",
+        "adaptive_simulations",
+        "min_simulations",
+        "adaptive_confidence",
+        "movegen",
+        "inference_backend",
+        "inference_batch_size",
+        "max_plies"
+      ],
+      "properties": {
+        "simulations": {"type": "integer", "minimum": 0},
+        "cpuct": {"type": "number", "minimum": 0},
+        "root_noise": {"type": "boolean"},
+        "root_dirichlet_alpha": {"type": "number", "minimum": 0},
+        "root_noise_fraction": {"type": "number", "minimum": 0, "maximum": 1},
+        "temperature": {"type": "number", "minimum": 0},
+        "draw_leaf_value": {"type": "number", "minimum": -1, "maximum": 1},
+        "anti_draw_logit_scale": {"type": "number", "minimum": 0},
+        "progress_prior_scale": {"type": "number", "minimum": 0},
+        "home_pressure_scale": {"type": "number", "minimum": 0},
+        "transpositions": {"type": "boolean"},
+        "reuse_tree": {"type": "boolean"},
+        "adaptive_simulations": {"type": "boolean"},
+        "min_simulations": {"type": "integer", "minimum": 0},
+        "adaptive_check_interval": {"type": "integer", "minimum": 0},
+        "adaptive_confidence": {"type": "number", "minimum": 0, "maximum": 1},
+        "movegen": {"type": "string", "enum": ["reference", "fast", "bitboard"]},
+        "inference_backend": {"type": "string", "enum": ["auto", "portable", "accelerate"]},
+        "inference_resolved_backend": {"type": "string", "enum": ["portable", "accelerate"]},
+        "inference_batch_size": {"type": "integer", "minimum": 0},
+        "max_plies": {"type": "integer", "minimum": 0}
+      }
+    },
+    "stats": {
+      "type": "object",
+      "required": [
+        "nodes",
+        "evals",
+        "simulations",
+        "elapsed_ms",
+        "root_legal_moves",
+        "transposition_hits",
+        "inference_batches",
+        "adaptive_stopped",
+        "movegen_ms",
+        "eval_ms",
+        "policy_ms",
+        "select_ms",
+        "backup_ms"
+      ],
+      "properties": {
+        "nodes": {"type": "integer", "minimum": 0},
+        "evals": {"type": "integer", "minimum": 0},
+        "simulations": {"type": "integer", "minimum": 0},
+        "elapsed_ms": {"type": "number", "minimum": 0},
+        "root_legal_moves": {"type": "integer", "minimum": 0},
+        "transposition_hits": {"type": "integer", "minimum": 0},
+        "inference_batches": {"type": "integer", "minimum": 0},
+        "adaptive_stopped": {"type": "boolean"},
+        "movegen_ms": {"type": "number", "minimum": 0},
+        "eval_ms": {"type": "number", "minimum": 0},
+        "policy_ms": {"type": "number", "minimum": 0},
+        "select_ms": {"type": "number", "minimum": 0},
+        "backup_ms": {"type": "number", "minimum": 0}
+      }
+    }
+  }
+}

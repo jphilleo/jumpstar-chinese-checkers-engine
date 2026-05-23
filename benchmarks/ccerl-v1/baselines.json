@@ -1,0 +1,101 @@
+{
+  "schema": "ccerl.baselines.v1",
+  "ruleset": "CCERL-2P10-v1",
+  "rule_profile": "strict",
+  "position_schedule": "benchmarks/ccerl-v1/positions/official_elo_v2.jsonl",
+  "default_neural_simulations": 768,
+  "anchor": {
+    "label": "random",
+    "elo": 0
+  },
+  "champion": {
+    "label": "iter060",
+    "model": "experiments/fresh_selfplay_alpha/champions/iter_060_fresh_iter058_1p8m_epoch003/model.ccpv",
+    "simulations": 768
+  },
+  "baselines": [
+    {
+      "label": "random",
+      "family": "algorithmic",
+      "bot": "random",
+      "role": "sanity-floor",
+      "ccp_command": "python3 tools/ccp_cczero_bot.py --bot random --name random"
+    },
+    {
+      "label": "greedy",
+      "family": "algorithmic",
+      "bot": "greedy",
+      "role": "simple-distance",
+      "ccp_command": "python3 tools/ccp_cczero_bot.py --bot greedy --name greedy"
+    },
+    {
+      "label": "traffic-greedy",
+      "family": "algorithmic",
+      "bot": "traffic-greedy",
+      "role": "handcrafted-traffic",
+      "ccp_command": "python3 tools/ccp_cczero_bot.py --bot traffic-greedy --name traffic-greedy"
+    },
+    {
+      "label": "converter",
+      "family": "algorithmic",
+      "bot": "converter",
+      "role": "classical-conversion",
+      "ccp_command": "python3 tools/ccp_cczero_bot.py --bot converter --name converter"
+    },
+    {
+      "label": "tt-pvs",
+      "family": "algorithmic",
+      "bot": "tt-pvs",
+      "role": "classical-search",
+      "ccp_command": "python3 tools/ccp_cczero_bot.py --bot tt-pvs --name tt-pvs"
+    },
+    {
+      "label": "fresh005",
+      "family": "neural",
+      "role": "weak-neural",
+      "model": "experiments/fresh_selfplay_alpha/champions/iter_005_effective_goal_v1/model.ccpv",
+      "simulations": 768,
+      "ccp_command": "python3 tools/ccp_cczero_engine.py --model experiments/fresh_selfplay_alpha/champions/iter_005_effective_goal_v1/model.ccpv --name fresh005 --simulations 768"
+    },
+    {
+      "label": "fresh009",
+      "family": "neural",
+      "role": "early-strong-neural",
+      "model": "experiments/fresh_selfplay_alpha/champions/iter_009_fixed_batched_mcts/model.ccpv",
+      "simulations": 768,
+      "ccp_command": "python3 tools/ccp_cczero_engine.py --model experiments/fresh_selfplay_alpha/champions/iter_009_fixed_batched_mcts/model.ccpv --name fresh009 --simulations 768"
+    },
+    {
+      "label": "fresh029",
+      "family": "neural",
+      "role": "mid-neural",
+      "model": "experiments/fresh_selfplay_alpha/champions/iter_029_merged768/model.ccpv",
+      "simulations": 768,
+      "ccp_command": "python3 tools/ccp_cczero_engine.py --model experiments/fresh_selfplay_alpha/champions/iter_029_merged768/model.ccpv --name fresh029 --simulations 768"
+    },
+    {
+      "label": "fresh046",
+      "family": "neural",
+      "role": "late-mid-neural",
+      "model": "experiments/fresh_selfplay_alpha/champions/iter_046_value_weight_010/model.ccpv",
+      "simulations": 768,
+      "ccp_command": "python3 tools/ccp_cczero_engine.py --model experiments/fresh_selfplay_alpha/champions/iter_046_value_weight_010/model.ccpv --name fresh046 --simulations 768"
+    },
+    {
+      "label": "iter057",
+      "family": "neural",
+      "role": "former-champion",
+      "model": "experiments/fresh_selfplay_alpha/champions/iter_057_fresh_iter056_endgame_deep_epoch004/model.ccpv",
+      "simulations": 768,
+      "ccp_command": "python3 tools/ccp_cczero_engine.py --model experiments/fresh_selfplay_alpha/champions/iter_057_fresh_iter056_endgame_deep_epoch004/model.ccpv --name iter057 --simulations 768"
+    },
+    {
+      "label": "iter060",
+      "family": "neural",
+      "role": "champion",
+      "model": "experiments/fresh_selfplay_alpha/champions/iter_060_fresh_iter058_1p8m_epoch003/model.ccpv",
+      "simulations": 768,
+      "ccp_command": "python3 tools/ccp_cczero_engine.py --model experiments/fresh_selfplay_alpha/champions/iter_060_fresh_iter058_1p8m_epoch003/model.ccpv --name iter060 --simulations 768"
+    }
+  ]
+}

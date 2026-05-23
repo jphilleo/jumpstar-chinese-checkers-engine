@@ -1,0 +1,20 @@
+{
+  "alpha": 0.05,
+  "beta": 0.05,
+  "candidate": "iter063",
+  "decision": "accept_h0",
+  "draws": 960,
+  "elo0": 0.0,
+  "elo1": 25.0,
+  "expected_score_h0": 0.5,
+  "expected_score_h1": 0.5359159269451023,
+  "games": 4128,
+  "llr": -34.85457264952741,
+  "losses": 1752,
+  "lower_bound": -2.9444389791664403,
+  "opponent": "iter060",
+  "schema": "ccerl.sprt_decision.v1",
+  "score": 0.45930232558139533,
+  "upper_bound": 2.9444389791664403,
+  "wins": 1416
+}

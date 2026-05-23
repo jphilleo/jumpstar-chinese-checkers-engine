@@ -1,0 +1,68 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CCZero compact self-play position v1",
+  "type": "object",
+  "required": [
+    "type",
+    "schema",
+    "game_id",
+    "seed",
+    "ply",
+    "player",
+    "hash",
+    "cells",
+    "model_id",
+    "rule_profile",
+    "result",
+    "chosen_action",
+    "actions",
+    "visits",
+    "visit_sum"
+  ],
+  "properties": {
+    "type": {"const": "selfplay_position"},
+    "schema": {"const": "cczero.selfplay.compact.v1"},
+    "game_id": {"type": "integer"},
+    "seed": {"type": "integer"},
+    "ply": {"type": "integer", "minimum": 0},
+    "player": {"type": "integer", "enum": [0, 1]},
+    "hash": {"type": "string", "pattern": "^0x[0-9a-fA-F]{16}(:[A-Za-z0-9_.-]+)?$"},
+    "cells": {"type": "string", "minLength": 121, "maxLength": 121, "pattern": "^[.01]{121}$"},
+    "model_id": {"type": "string"},
+    "target_model_id": {"type": "string"},
+    "rule_profile": {"type": "string"},
+    "result": {"type": "integer", "enum": [-1, 0, 1]},
+    "source_iter": {"type": "integer", "minimum": 0},
+    "target_age": {"type": "integer", "minimum": 0},
+    "requested_simulations": {"type": "integer", "minimum": 0},
+    "actual_simulations": {"type": "integer", "minimum": 0},
+    "search_config_hash": {"type": "string"},
+    "target_model_strength_tier": {"type": "string"},
+    "trusted_target": {"type": "boolean"},
+    "phase": {"type": "integer"},
+    "finish_margin_moves": {"type": "integer", "minimum": 0},
+    "finish_margin_max_moves": {"type": "integer", "minimum": 0},
+    "finish_margin_capped": {"type": "boolean"},
+    "score_margin": {"type": "number", "minimum": -1, "maximum": 1},
+    "score_margin_source": {"type": "string"},
+    "root_q": {"type": "number", "minimum": -1, "maximum": 1},
+    "root_q_source": {"type": "string"},
+    "chosen_action": {"type": "integer", "minimum": 0, "maximum": 14640},
+    "actions": {
+      "type": "array",
+      "minItems": 1,
+      "items": {"type": "integer", "minimum": 0, "maximum": 14640}
+    },
+    "visits": {
+      "type": "array",
+      "minItems": 1,
+      "items": {"type": "integer", "minimum": 0}
+    },
+    "priors": {
+      "type": "array",
+      "minItems": 1,
+      "items": {"type": "number", "minimum": 0, "maximum": 1}
+    },
+    "visit_sum": {"type": "integer", "minimum": 0}
+  }
+}

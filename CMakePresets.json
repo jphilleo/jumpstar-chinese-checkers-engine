@@ -1,0 +1,73 @@
+{
+  "version": 3,
+  "configurePresets": [
+    {
+      "name": "debug",
+      "displayName": "Debug",
+      "generator": "Unix Makefiles",
+      "binaryDir": "${sourceDir}/build/cmake-debug",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug",
+        "CCZERO_USE_ACCELERATE": "ON"
+      }
+    },
+    {
+      "name": "release",
+      "displayName": "Release",
+      "generator": "Unix Makefiles",
+      "binaryDir": "${sourceDir}/build/cmake-release",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release",
+        "CCZERO_USE_ACCELERATE": "ON"
+      }
+    },
+    {
+      "name": "release-native",
+      "displayName": "Release Native",
+      "generator": "Unix Makefiles",
+      "binaryDir": "${sourceDir}/build/cmake-release-native",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release",
+        "CCZERO_USE_ACCELERATE": "ON",
+        "CMAKE_CXX_FLAGS_RELEASE": "-O3 -DNDEBUG -DCCZERO_NATIVE_BUILD -mcpu=native -flto"
+      }
+    }
+  ],
+  "buildPresets": [
+    {
+      "name": "debug",
+      "configurePreset": "debug"
+    },
+    {
+      "name": "release",
+      "configurePreset": "release"
+    },
+    {
+      "name": "release-native",
+      "configurePreset": "release-native"
+    }
+  ],
+  "testPresets": [
+    {
+      "name": "debug",
+      "configurePreset": "debug",
+      "output": {
+        "outputOnFailure": true
+      }
+    },
+    {
+      "name": "release",
+      "configurePreset": "release",
+      "output": {
+        "outputOnFailure": true
+      }
+    },
+    {
+      "name": "release-native",
+      "configurePreset": "release-native",
+      "output": {
+        "outputOnFailure": true
+      }
+    }
+  ]
+}

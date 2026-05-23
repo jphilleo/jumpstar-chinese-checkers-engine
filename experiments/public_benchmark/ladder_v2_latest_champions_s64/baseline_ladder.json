@@ -1,0 +1,3027 @@
+{
+  "baselines": {
+    "converter": {
+      "bot": "converter",
+      "ccp_command": "python3 tools/ccp_cczero_bot.py --bot converter --name converter",
+      "family": "algorithmic",
+      "label": "converter",
+      "role": "classical-conversion"
+    },
+    "greedy": {
+      "bot": "greedy",
+      "ccp_command": "python3 tools/ccp_cczero_bot.py --bot greedy --name greedy",
+      "family": "algorithmic",
+      "label": "greedy",
+      "role": "simple-distance"
+    },
+    "harryz-rule": {
+      "ccp_command": "python3 tools/ccp_open_source_style_bot.py --style harryz-rule --name harryz-rule",
+      "family": "open_source_adapter",
+      "label": "harryz-rule"
+    },
+    "iter005": {
+      "ccp_command": "python3 tools/ccp_cczero_engine.py --model experiments/fresh_selfplay_alpha/champions/iter_005_effective_goal_v1/model.ccpv --name iter005 --simulations 768",
+      "family": "neural",
+      "label": "iter005",
+      "model": "experiments/fresh_selfplay_alpha/champions/iter_005_effective_goal_v1/model.ccpv",
+      "role": "historical-champion",
+      "simulations": 768
+    },
+    "iter009": {
+      "ccp_command": "python3 tools/ccp_cczero_engine.py --model experiments/fresh_selfplay_alpha/champions/iter_009_fixed_batched_mcts/model.ccpv --name iter009 --simulations 768",
+      "family": "neural",
+      "label": "iter009",
+      "model": "experiments/fresh_selfplay_alpha/champions/iter_009_fixed_batched_mcts/model.ccpv",
+      "role": "historical-champion",
+      "simulations": 768
+    },
+    "iter029": {
+      "ccp_command": "python3 tools/ccp_cczero_engine.py --model experiments/fresh_selfplay_alpha/champions/iter_029_merged768/model.ccpv --name iter029 --simulations 768",
+      "family": "neural",
+      "label": "iter029",
+      "model": "experiments/fresh_selfplay_alpha/champions/iter_029_merged768/model.ccpv",
+      "role": "historical-champion",
+      "simulations": 768
+    },
+    "iter046": {
+      "ccp_command": "python3 tools/ccp_cczero_engine.py --model experiments/fresh_selfplay_alpha/champions/iter_046_value_weight_010/model.ccpv --name iter046 --simulations 768",
+      "family": "neural",
+      "label": "iter046",
+      "model": "experiments/fresh_selfplay_alpha/champions/iter_046_value_weight_010/model.ccpv",
+      "role": "historical-champion",
+      "simulations": 768
+    },
+    "iter057": {
+      "ccp_command": "python3 tools/ccp_cczero_engine.py --model experiments/fresh_selfplay_alpha/champions/iter_057_fresh_iter056_endgame_deep_epoch004/model.ccpv --name iter057 --simulations 768",
+      "family": "neural",
+      "label": "iter057",
+      "model": "experiments/fresh_selfplay_alpha/champions/iter_057_fresh_iter056_endgame_deep_epoch004/model.ccpv",
+      "role": "historical-champion",
+      "simulations": 768
+    },
+    "iter060": {
+      "ccp_command": "python3 tools/ccp_cczero_engine.py --model experiments/fresh_selfplay_alpha/champions/iter_060_fresh_iter058_1p8m_epoch003/model.ccpv --name iter060 --simulations 768",
+      "family": "neural",
+      "label": "iter060",
+      "model": "experiments/fresh_selfplay_alpha/champions/iter_060_fresh_iter058_1p8m_epoch003/model.ccpv",
+      "role": "historical-champion",
+      "simulations": 768
+    },
+    "iter061": {
+      "ccp_command": "python3 tools/ccp_cczero_engine.py --model experiments/fresh_selfplay_alpha/champions/iter_061_fresh_iter060_1p8m_epoch003/model.ccpv --name iter061 --simulations 768",
+      "family": "neural",
+      "label": "iter061",
+      "model": "experiments/fresh_selfplay_alpha/champions/iter_061_fresh_iter060_1p8m_epoch003/model.ccpv",
+      "role": "historical-champion",
+      "simulations": 768
+    },
+    "iter062": {
+      "ccp_command": "python3 tools/ccp_cczero_engine.py --model experiments/fresh_selfplay_alpha/champions/iter_062_fresh_iter061_1p8m_epoch003/model.ccpv --name iter062 --simulations 768",
+      "family": "neural",
+      "label": "iter062",
+      "model": "experiments/fresh_selfplay_alpha/champions/iter_062_fresh_iter061_1p8m_epoch003/model.ccpv",
+      "role": "historical-champion",
+      "simulations": 768
+    },
+    "iter063": {
+      "ccp_command": "python3 tools/ccp_cczero_engine.py --model experiments/fresh_selfplay_alpha/champions/iter_063_fresh_iter061_1p8m_epoch004/model.ccpv --name iter063 --simulations 768",
+      "family": "neural",
+      "label": "iter063",
+      "model": "experiments/fresh_selfplay_alpha/champions/iter_063_fresh_iter061_1p8m_epoch004/model.ccpv",
+      "role": "champion-v2",
+      "simulations": 768
+    },
+    "iter064": {
+      "family": "neural",
+      "label": "iter064",
+      "model": "experiments/fresh_selfplay_alpha/champions/iter_064_fresh_iter063_1p8m_epoch004/model.ccpv",
+      "role": "historical-champion",
+      "simulations": 768
+    },
+    "iter082": {
+      "family": "neural",
+      "label": "iter082",
+      "model": "experiments/fresh_selfplay_alpha/champions/iter_082_iter64_finetune_2p5m_epoch004/model.ccpv",
+      "role": "current-champion",
+      "simulations": 768
+    },
+    "marblefish-ab": {
+      "ccp_command": "python3 tools/ccp_open_source_style_bot.py --style marblefish-ab --depth 2 --beam 4 --name marblefish-ab",
+      "family": "open_source_adapter",
+      "label": "marblefish-ab"
+    },
+    "random": {
+      "bot": "random",
+      "ccp_command": "python3 tools/ccp_cczero_bot.py --bot random --name random",
+      "family": "algorithmic",
+      "label": "random",
+      "role": "sanity-floor"
+    },
+    "traffic-greedy": {
+      "bot": "traffic-greedy",
+      "ccp_command": "python3 tools/ccp_cczero_bot.py --bot traffic-greedy --name traffic-greedy",
+      "family": "algorithmic",
+      "label": "traffic-greedy",
+      "role": "handcrafted-traffic"
+    },
+    "tt-pvs": {
+      "bot": "tt-pvs",
+      "ccp_command": "python3 tools/ccp_cczero_bot.py --bot tt-pvs --name tt-pvs",
+      "family": "algorithmic",
+      "label": "tt-pvs",
+      "role": "classical-search"
+    },
+    "zedrichu-minimax": {
+      "ccp_command": "python3 tools/ccp_open_source_style_bot.py --style zedrichu-minimax --depth 2 --beam 4 --name zedrichu-minimax",
+      "family": "open_source_adapter",
+      "label": "zedrichu-minimax"
+    }
+  },
+  "elo": {
+    "anchor": "random",
+    "anchor_elo": 0.0,
+    "draw_policy": "half",
+    "games": 29412,
+    "log_likelihood": -13089.891432466673,
+    "players": 19,
+    "ratings": [
+      {
+        "ci95": [
+          874.1269138943031,
+          946.9330045618043
+        ],
+        "draws": 371,
+        "elo": 910.5299592280537,
+        "games": 3096,
+        "losses": 484,
+        "player": "iter060",
+        "score_rate": 0.7837532299741602,
+        "standard_error": 18.572982313138073,
+        "wins": 2241
+      },
+      {
+        "ci95": [
+          863.9694491909805,
+          936.6017690254533
+        ],
+        "draws": 539,
+        "elo": 900.2856091082169,
+        "games": 3096,
+        "losses": 428,
+        "player": "iter082",
+        "score_rate": 0.7747093023255814,
+        "standard_error": 18.52865301899819,
+        "wins": 2129
+      },
+      {
+        "ci95": [
+          854.8666221698469,
+          927.3512140512613
+        ],
+        "draws": 478,
+        "elo": 891.1089181105541,
+        "games": 3096,
+        "losses": 484,
+        "player": "iter063",
+        "score_rate": 0.7664728682170543,
+        "standard_error": 18.490967316687343,
+        "wins": 2134
+      },
+      {
+        "ci95": [
+          852.2143798713262,
+          924.6572845972626
+        ],
+        "draws": 409,
+        "elo": 888.4358322342944,
+        "games": 3096,
+        "losses": 526,
+        "player": "iter064",
+        "score_rate": 0.7640503875968992,
+        "standard_error": 18.4803328382491,
+        "wins": 2161
+      },
+      {
+        "ci95": [
+          843.2767156867029,
+          915.583444274176
+        ],
+        "draws": 442,
+        "elo": 879.4300799804395,
+        "games": 3096,
+        "losses": 535,
+        "player": "iter061",
+        "score_rate": 0.7558139534883721,
+        "standard_error": 18.445594027416618,
+        "wins": 2119
+      },
+      {
+        "ci95": [
+          836.5208310788653,
+          908.7288562992428
+        ],
+        "draws": 491,
+        "elo": 872.624843689054,
+        "games": 3096,
+        "losses": 530,
+        "player": "iter062",
+        "score_rate": 0.749515503875969,
+        "standard_error": 18.4204145970351,
+        "wins": 2075
+      },
+      {
+        "ci95": [
+          777.5215862041674,
+          848.9995615147155
+        ],
+        "draws": 324,
+        "elo": 813.2605738594415,
+        "games": 3096,
+        "losses": 791,
+        "player": "iter057",
+        "score_rate": 0.6921834625322998,
+        "standard_error": 18.234177375139836,
+        "wins": 1981
+      },
+      {
+        "ci95": [
+          701.2272057615756,
+          772.0223617695023
+        ],
+        "draws": 189,
+        "elo": 736.624783765539,
+        "games": 3096,
+        "losses": 1102,
+        "player": "tt-pvs",
+        "score_rate": 0.6135335917312662,
+        "standard_error": 18.059988777532308,
+        "wins": 1805
+      },
+      {
+        "ci95": [
+          649.1752903955455,
+          719.6212021901213
+        ],
+        "draws": 333,
+        "elo": 684.3982462928334,
+        "games": 3096,
+        "losses": 1201,
+        "player": "iter046",
+        "score_rate": 0.5583010335917312,
+        "standard_error": 17.970895865963225,
+        "wins": 1562
+      },
+      {
+        "ci95": [
+          618.9340163821499,
+          689.211103319299
+        ],
+        "draws": 301,
+        "elo": 654.0725598507245,
+        "games": 3096,
+        "losses": 1317,
+        "player": "iter029",
+        "score_rate": 0.526001291989664,
+        "standard_error": 17.927828300293154,
+        "wins": 1478
+      },
+      {
+        "ci95": [
+          481.53136206969873,
+          551.3240531221294
+        ],
+        "draws": 285,
+        "elo": 516.4277075959141,
+        "games": 3096,
+        "losses": 1772,
+        "player": "iter009",
+        "score_rate": 0.38162144702842377,
+        "standard_error": 17.804257921538433,
+        "wins": 1039
+      },
+      {
+        "ci95": [
+          475.95951177263885,
+          545.7424703627023
+        ],
+        "draws": 88,
+        "elo": 510.8509910676706,
+        "games": 3096,
+        "losses": 1888,
+        "player": "converter",
+        "score_rate": 0.375968992248062,
+        "standard_error": 17.801775150526392,
+        "wins": 1120
+      },
+      {
+        "ci95": [
+          448.69200105510276,
+          518.43897077614
+        ],
+        "draws": 237,
+        "elo": 483.56548591562137,
+        "games": 3096,
+        "losses": 1898,
+        "player": "iter005",
+        "score_rate": 0.34867571059431524,
+        "standard_error": 17.792594316591114,
+        "wins": 961
+      },
+      {
+        "ci95": [
+          446.40302423128605,
+          516.1478586844249
+        ],
+        "draws": 67,
+        "elo": 481.2754414578555,
+        "games": 3096,
+        "losses": 1990,
+        "player": "greedy",
+        "score_rate": 0.34641472868217055,
+        "standard_error": 17.792049605392577,
+        "wins": 1039
+      },
+      {
+        "ci95": [
+          407.8179372054384,
+          477.5476079325489
+        ],
+        "draws": 460,
+        "elo": 442.68277256899364,
+        "games": 3096,
+        "losses": 1909,
+        "player": "marblefish-ab",
+        "score_rate": 0.30910852713178294,
+        "standard_error": 17.788181307936345,
+        "wins": 727
+      },
+      {
+        "ci95": [
+          344.0832731284183,
+          413.8739351431803
+        ],
+        "draws": 1547,
+        "elo": 378.9786041357993,
+        "games": 3096,
+        "losses": 1544,
+        "player": "harryz-rule",
+        "score_rate": 0.251453488372093,
+        "standard_error": 17.80374030988828,
+        "wins": 5
+      },
+      {
+        "ci95": [
+          334.8092152300548,
+          404.617608151026
+        ],
+        "draws": 694,
+        "elo": 369.7134116905404,
+        "games": 3096,
+        "losses": 1995,
+        "player": "zedrichu-minimax",
+        "score_rate": 0.24354005167958656,
+        "standard_error": 17.808263500247747,
+        "wins": 407
+      },
+      {
+        "ci95": [
+          304.77848425181713,
+          374.6597465494113
+        ],
+        "draws": 141,
+        "elo": 339.7191154006142,
+        "games": 3096,
+        "losses": 2348,
+        "player": "traffic-greedy",
+        "score_rate": 0.21883074935400518,
+        "standard_error": 17.826852626937285,
+        "wins": 607
+      },
+      {
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "draws": 248,
+        "elo": 0.0,
+        "games": 3096,
+        "losses": 2848,
+        "player": "random",
+        "score_rate": 0.040051679586563305,
+        "standard_error": 0.0,
+        "wins": 0
+      }
+    ]
+  },
+  "excluded_labels": [
+    "svjayanthi-mcts-fast"
+  ],
+  "pairs": [
+    {
+      "a": "greedy",
+      "b": "random",
+      "draws": 0,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_core_s64/games/000_greedy_vs_random.jsonl",
+      "losses": 0,
+      "reasons": {
+        "all_pieces_in_goal": 6,
+        "anti_block_goal_full": 166
+      },
+      "score": 1.0,
+      "wins": 172
+    },
+    {
+      "a": "traffic-greedy",
+      "b": "random",
+      "draws": 0,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_core_s64/games/001_traffic-greedy_vs_random.jsonl",
+      "losses": 0,
+      "reasons": {
+        "all_pieces_in_goal": 15,
+        "anti_block_goal_full": 157
+      },
+      "score": 1.0,
+      "wins": 172
+    },
+    {
+      "a": "traffic-greedy",
+      "b": "greedy",
+      "draws": 9,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_core_s64/games/002_traffic-greedy_vs_greedy.jsonl",
+      "losses": 125,
+      "reasons": {
+        "all_pieces_in_goal": 98,
+        "anti_block_goal_full": 65,
+        "equal_turn_goal_draw": 9
+      },
+      "score": 0.24709302325581395,
+      "wins": 38
+    },
+    {
+      "a": "converter",
+      "b": "random",
+      "draws": 0,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_core_s64/games/003_converter_vs_random.jsonl",
+      "losses": 0,
+      "reasons": {
+        "all_pieces_in_goal": 10,
+        "anti_block_goal_full": 162
+      },
+      "score": 1.0,
+      "wins": 172
+    },
+    {
+      "a": "converter",
+      "b": "greedy",
+      "draws": 2,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_core_s64/games/004_converter_vs_greedy.jsonl",
+      "losses": 60,
+      "reasons": {
+        "all_pieces_in_goal": 167,
+        "anti_block_goal_full": 3,
+        "equal_turn_goal_draw": 2
+      },
+      "score": 0.6453488372093024,
+      "wins": 110
+    },
+    {
+      "a": "converter",
+      "b": "traffic-greedy",
+      "draws": 1,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_core_s64/games/005_converter_vs_traffic-greedy.jsonl",
+      "losses": 38,
+      "reasons": {
+        "all_pieces_in_goal": 108,
+        "anti_block_goal_full": 63,
+        "equal_turn_goal_draw": 1
+      },
+      "score": 0.7761627906976745,
+      "wins": 133
+    },
+    {
+      "a": "tt-pvs",
+      "b": "random",
+      "draws": 0,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_core_s64/games/006_tt-pvs_vs_random.jsonl",
+      "losses": 0,
+      "reasons": {
+        "all_pieces_in_goal": 4,
+        "anti_block_goal_full": 168
+      },
+      "score": 1.0,
+      "wins": 172
+    },
+    {
+      "a": "tt-pvs",
+      "b": "greedy",
+      "draws": 1,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_core_s64/games/007_tt-pvs_vs_greedy.jsonl",
+      "losses": 27,
+      "reasons": {
+        "all_pieces_in_goal": 112,
+        "anti_block_goal_full": 59,
+        "equal_turn_goal_draw": 1
+      },
+      "score": 0.8401162790697675,
+      "wins": 144
+    },
+    {
+      "a": "tt-pvs",
+      "b": "traffic-greedy",
+      "draws": 3,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_core_s64/games/008_tt-pvs_vs_traffic-greedy.jsonl",
+      "losses": 9,
+      "reasons": {
+        "all_pieces_in_goal": 42,
+        "anti_block_goal_full": 127,
+        "max_ply": 3
+      },
+      "score": 0.938953488372093,
+      "wins": 160
+    },
+    {
+      "a": "tt-pvs",
+      "b": "converter",
+      "draws": 0,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_core_s64/games/009_tt-pvs_vs_converter.jsonl",
+      "losses": 30,
+      "reasons": {
+        "all_pieces_in_goal": 154,
+        "anti_block_goal_full": 18
+      },
+      "score": 0.8255813953488372,
+      "wins": 142
+    },
+    {
+      "a": "iter005",
+      "b": "random",
+      "draws": 1,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_core_s64/games/010_iter005_vs_random.jsonl",
+      "losses": 0,
+      "reasons": {
+        "all_pieces_in_goal": 5,
+        "anti_block_goal_full": 166,
+        "max_ply": 1
+      },
+      "score": 0.997093023255814,
+      "wins": 171
+    },
+    {
+      "a": "iter005",
+      "b": "greedy",
+      "draws": 1,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_core_s64/games/011_iter005_vs_greedy.jsonl",
+      "losses": 73,
+      "reasons": {
+        "all_pieces_in_goal": 157,
+        "anti_block_goal_full": 14,
+        "equal_turn_goal_draw": 1
+      },
+      "score": 0.5726744186046512,
+      "wins": 98
+    },
+    {
+      "a": "iter005",
+      "b": "traffic-greedy",
+      "draws": 2,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_core_s64/games/012_iter005_vs_traffic-greedy.jsonl",
+      "losses": 50,
+      "reasons": {
+        "all_pieces_in_goal": 103,
+        "anti_block_goal_full": 67,
+        "equal_turn_goal_draw": 1,
+        "max_ply": 1
+      },
+      "score": 0.7034883720930233,
+      "wins": 120
+    },
+    {
+      "a": "iter005",
+      "b": "converter",
+      "draws": 0,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_core_s64/games/013_iter005_vs_converter.jsonl",
+      "losses": 96,
+      "reasons": {
+        "all_pieces_in_goal": 155,
+        "anti_block_goal_full": 17
+      },
+      "score": 0.4418604651162791,
+      "wins": 76
+    },
+    {
+      "a": "iter005",
+      "b": "tt-pvs",
+      "draws": 4,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_core_s64/games/014_iter005_vs_tt-pvs.jsonl",
+      "losses": 137,
+      "reasons": {
+        "all_pieces_in_goal": 108,
+        "anti_block_goal_full": 60,
+        "equal_turn_goal_draw": 3,
+        "max_ply": 1
+      },
+      "score": 0.19186046511627908,
+      "wins": 31
+    },
+    {
+      "a": "iter009",
+      "b": "random",
+      "draws": 1,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_core_s64/games/015_iter009_vs_random.jsonl",
+      "losses": 0,
+      "reasons": {
+        "all_pieces_in_goal": 6,
+        "anti_block_goal_full": 165,
+        "max_ply": 1
+      },
+      "score": 0.997093023255814,
+      "wins": 171
+    },
+    {
+      "a": "iter009",
+      "b": "greedy",
+      "draws": 2,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_core_s64/games/016_iter009_vs_greedy.jsonl",
+      "losses": 69,
+      "reasons": {
+        "all_pieces_in_goal": 164,
+        "anti_block_goal_full": 6,
+        "equal_turn_goal_draw": 2
+      },
+      "score": 0.5930232558139535,
+      "wins": 101
+    },
+    {
+      "a": "iter009",
+      "b": "traffic-greedy",
+      "draws": 3,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_core_s64/games/017_iter009_vs_traffic-greedy.jsonl",
+      "losses": 37,
+      "reasons": {
+        "all_pieces_in_goal": 107,
+        "anti_block_goal_full": 62,
+        "equal_turn_goal_draw": 3
+      },
+      "score": 0.7761627906976745,
+      "wins": 132
+    },
+    {
+      "a": "iter009",
+      "b": "converter",
+      "draws": 4,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_core_s64/games/018_iter009_vs_converter.jsonl",
+      "losses": 76,
+      "reasons": {
+        "all_pieces_in_goal": 163,
+        "anti_block_goal_full": 5,
+        "equal_turn_goal_draw": 4
+      },
+      "score": 0.5465116279069767,
+      "wins": 92
+    },
+    {
+      "a": "iter009",
+      "b": "tt-pvs",
+      "draws": 6,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_core_s64/games/019_iter009_vs_tt-pvs.jsonl",
+      "losses": 133,
+      "reasons": {
+        "all_pieces_in_goal": 123,
+        "anti_block_goal_full": 43,
+        "equal_turn_goal_draw": 2,
+        "max_ply": 4
+      },
+      "score": 0.20930232558139536,
+      "wins": 33
+    },
+    {
+      "a": "iter009",
+      "b": "iter005",
+      "draws": 4,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_core_s64/games/020_iter009_vs_iter005.jsonl",
+      "losses": 78,
+      "reasons": {
+        "all_pieces_in_goal": 159,
+        "anti_block_goal_full": 9,
+        "equal_turn_goal_draw": 4
+      },
+      "score": 0.5348837209302325,
+      "wins": 90
+    },
+    {
+      "a": "iter029",
+      "b": "random",
+      "draws": 6,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_core_s64/games/021_iter029_vs_random.jsonl",
+      "losses": 0,
+      "reasons": {
+        "all_pieces_in_goal": 9,
+        "anti_block_goal_full": 157,
+        "max_ply": 6
+      },
+      "score": 0.9825581395348837,
+      "wins": 166
+    },
+    {
+      "a": "iter029",
+      "b": "greedy",
+      "draws": 11,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_core_s64/games/022_iter029_vs_greedy.jsonl",
+      "losses": 19,
+      "reasons": {
+        "all_pieces_in_goal": 145,
+        "anti_block_goal_full": 16,
+        "equal_turn_goal_draw": 11
+      },
+      "score": 0.8575581395348837,
+      "wins": 142
+    },
+    {
+      "a": "iter029",
+      "b": "traffic-greedy",
+      "draws": 5,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_core_s64/games/023_iter029_vs_traffic-greedy.jsonl",
+      "losses": 6,
+      "reasons": {
+        "all_pieces_in_goal": 99,
+        "anti_block_goal_full": 68,
+        "equal_turn_goal_draw": 5
+      },
+      "score": 0.9505813953488372,
+      "wins": 161
+    },
+    {
+      "a": "iter029",
+      "b": "converter",
+      "draws": 4,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_core_s64/games/024_iter029_vs_converter.jsonl",
+      "losses": 34,
+      "reasons": {
+        "all_pieces_in_goal": 164,
+        "anti_block_goal_full": 4,
+        "equal_turn_goal_draw": 4
+      },
+      "score": 0.7906976744186046,
+      "wins": 134
+    },
+    {
+      "a": "iter029",
+      "b": "tt-pvs",
+      "draws": 9,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_core_s64/games/025_iter029_vs_tt-pvs.jsonl",
+      "losses": 103,
+      "reasons": {
+        "all_pieces_in_goal": 131,
+        "anti_block_goal_full": 32,
+        "equal_turn_goal_draw": 8,
+        "max_ply": 1
+      },
+      "score": 0.375,
+      "wins": 60
+    },
+    {
+      "a": "iter029",
+      "b": "iter005",
+      "draws": 4,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_core_s64/games/026_iter029_vs_iter005.jsonl",
+      "losses": 21,
+      "reasons": {
+        "all_pieces_in_goal": 157,
+        "anti_block_goal_full": 11,
+        "equal_turn_goal_draw": 4
+      },
+      "score": 0.8662790697674418,
+      "wins": 147
+    },
+    {
+      "a": "iter029",
+      "b": "iter009",
+      "draws": 4,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_core_s64/games/027_iter029_vs_iter009.jsonl",
+      "losses": 28,
+      "reasons": {
+        "all_pieces_in_goal": 157,
+        "anti_block_goal_full": 11,
+        "equal_turn_goal_draw": 4
+      },
+      "score": 0.8255813953488372,
+      "wins": 140
+    },
+    {
+      "a": "iter046",
+      "b": "random",
+      "draws": 5,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_core_s64/games/028_iter046_vs_random.jsonl",
+      "losses": 0,
+      "reasons": {
+        "all_pieces_in_goal": 13,
+        "anti_block_goal_full": 154,
+        "max_ply": 5
+      },
+      "score": 0.9854651162790697,
+      "wins": 167
+    },
+    {
+      "a": "iter046",
+      "b": "greedy",
+      "draws": 4,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_core_s64/games/029_iter046_vs_greedy.jsonl",
+      "losses": 17,
+      "reasons": {
+        "all_pieces_in_goal": 151,
+        "anti_block_goal_full": 17,
+        "equal_turn_goal_draw": 4
+      },
+      "score": 0.8895348837209303,
+      "wins": 151
+    },
+    {
+      "a": "iter046",
+      "b": "traffic-greedy",
+      "draws": 4,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_core_s64/games/030_iter046_vs_traffic-greedy.jsonl",
+      "losses": 3,
+      "reasons": {
+        "all_pieces_in_goal": 104,
+        "anti_block_goal_full": 64,
+        "equal_turn_goal_draw": 3,
+        "max_ply": 1
+      },
+      "score": 0.9709302325581395,
+      "wins": 165
+    },
+    {
+      "a": "iter046",
+      "b": "converter",
+      "draws": 0,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_core_s64/games/031_iter046_vs_converter.jsonl",
+      "losses": 22,
+      "reasons": {
+        "all_pieces_in_goal": 165,
+        "anti_block_goal_full": 7
+      },
+      "score": 0.872093023255814,
+      "wins": 150
+    },
+    {
+      "a": "iter046",
+      "b": "tt-pvs",
+      "draws": 6,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_core_s64/games/032_iter046_vs_tt-pvs.jsonl",
+      "losses": 90,
+      "reasons": {
+        "all_pieces_in_goal": 122,
+        "anti_block_goal_full": 44,
+        "equal_turn_goal_draw": 4,
+        "max_ply": 2
+      },
+      "score": 0.45930232558139533,
+      "wins": 76
+    },
+    {
+      "a": "iter046",
+      "b": "iter005",
+      "draws": 4,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_core_s64/games/033_iter046_vs_iter005.jsonl",
+      "losses": 20,
+      "reasons": {
+        "all_pieces_in_goal": 129,
+        "anti_block_goal_full": 39,
+        "equal_turn_goal_draw": 4
+      },
+      "score": 0.872093023255814,
+      "wins": 148
+    },
+    {
+      "a": "iter046",
+      "b": "iter009",
+      "draws": 3,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_core_s64/games/034_iter046_vs_iter009.jsonl",
+      "losses": 54,
+      "reasons": {
+        "all_pieces_in_goal": 156,
+        "anti_block_goal_full": 13,
+        "equal_turn_goal_draw": 3
+      },
+      "score": 0.6773255813953488,
+      "wins": 115
+    },
+    {
+      "a": "iter046",
+      "b": "iter029",
+      "draws": 15,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_core_s64/games/035_iter046_vs_iter029.jsonl",
+      "losses": 68,
+      "reasons": {
+        "all_pieces_in_goal": 150,
+        "anti_block_goal_full": 7,
+        "equal_turn_goal_draw": 15
+      },
+      "score": 0.561046511627907,
+      "wins": 89
+    },
+    {
+      "a": "iter057",
+      "b": "random",
+      "draws": 4,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_core_s64/games/036_iter057_vs_random.jsonl",
+      "losses": 0,
+      "reasons": {
+        "all_pieces_in_goal": 2,
+        "anti_block_goal_full": 166,
+        "max_ply": 4
+      },
+      "score": 0.9883720930232558,
+      "wins": 168
+    },
+    {
+      "a": "iter057",
+      "b": "greedy",
+      "draws": 2,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_core_s64/games/037_iter057_vs_greedy.jsonl",
+      "losses": 9,
+      "reasons": {
+        "all_pieces_in_goal": 157,
+        "anti_block_goal_full": 13,
+        "equal_turn_goal_draw": 2
+      },
+      "score": 0.9418604651162791,
+      "wins": 161
+    },
+    {
+      "a": "iter057",
+      "b": "traffic-greedy",
+      "draws": 0,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_core_s64/games/038_iter057_vs_traffic-greedy.jsonl",
+      "losses": 3,
+      "reasons": {
+        "all_pieces_in_goal": 96,
+        "anti_block_goal_full": 76
+      },
+      "score": 0.9825581395348837,
+      "wins": 169
+    },
+    {
+      "a": "iter057",
+      "b": "converter",
+      "draws": 2,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_core_s64/games/039_iter057_vs_converter.jsonl",
+      "losses": 18,
+      "reasons": {
+        "all_pieces_in_goal": 166,
+        "anti_block_goal_full": 4,
+        "equal_turn_goal_draw": 2
+      },
+      "score": 0.8895348837209303,
+      "wins": 152
+    },
+    {
+      "a": "iter057",
+      "b": "tt-pvs",
+      "draws": 12,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_core_s64/games/040_iter057_vs_tt-pvs.jsonl",
+      "losses": 65,
+      "reasons": {
+        "all_pieces_in_goal": 141,
+        "anti_block_goal_full": 19,
+        "equal_turn_goal_draw": 11,
+        "max_ply": 1
+      },
+      "score": 0.5872093023255814,
+      "wins": 95
+    },
+    {
+      "a": "iter057",
+      "b": "iter005",
+      "draws": 0,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_core_s64/games/041_iter057_vs_iter005.jsonl",
+      "losses": 9,
+      "reasons": {
+        "all_pieces_in_goal": 165,
+        "anti_block_goal_full": 7
+      },
+      "score": 0.9476744186046512,
+      "wins": 163
+    },
+    {
+      "a": "iter057",
+      "b": "iter009",
+      "draws": 2,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_core_s64/games/042_iter057_vs_iter009.jsonl",
+      "losses": 10,
+      "reasons": {
+        "all_pieces_in_goal": 165,
+        "anti_block_goal_full": 5,
+        "equal_turn_goal_draw": 2
+      },
+      "score": 0.936046511627907,
+      "wins": 160
+    },
+    {
+      "a": "iter057",
+      "b": "iter029",
+      "draws": 13,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_core_s64/games/043_iter057_vs_iter029.jsonl",
+      "losses": 18,
+      "reasons": {
+        "all_pieces_in_goal": 154,
+        "anti_block_goal_full": 5,
+        "equal_turn_goal_draw": 13
+      },
+      "score": 0.8575581395348837,
+      "wins": 141
+    },
+    {
+      "a": "iter057",
+      "b": "iter046",
+      "draws": 38,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_core_s64/games/044_iter057_vs_iter046.jsonl",
+      "losses": 27,
+      "reasons": {
+        "all_pieces_in_goal": 124,
+        "anti_block_goal_full": 10,
+        "equal_turn_goal_draw": 38
+      },
+      "score": 0.7325581395348837,
+      "wins": 107
+    },
+    {
+      "a": "iter060",
+      "b": "random",
+      "draws": 7,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_core_s64/games/045_iter060_vs_random.jsonl",
+      "losses": 0,
+      "reasons": {
+        "all_pieces_in_goal": 3,
+        "anti_block_goal_full": 162,
+        "max_ply": 7
+      },
+      "score": 0.9796511627906976,
+      "wins": 165
+    },
+    {
+      "a": "iter060",
+      "b": "greedy",
+      "draws": 3,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_core_s64/games/046_iter060_vs_greedy.jsonl",
+      "losses": 5,
+      "reasons": {
+        "all_pieces_in_goal": 158,
+        "anti_block_goal_full": 11,
+        "equal_turn_goal_draw": 3
+      },
+      "score": 0.9622093023255814,
+      "wins": 164
+    },
+    {
+      "a": "iter060",
+      "b": "traffic-greedy",
+      "draws": 3,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_core_s64/games/047_iter060_vs_traffic-greedy.jsonl",
+      "losses": 1,
+      "reasons": {
+        "all_pieces_in_goal": 104,
+        "anti_block_goal_full": 65,
+        "equal_turn_goal_draw": 3
+      },
+      "score": 0.9854651162790697,
+      "wins": 168
+    },
+    {
+      "a": "iter060",
+      "b": "converter",
+      "draws": 0,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_core_s64/games/048_iter060_vs_converter.jsonl",
+      "losses": 8,
+      "reasons": {
+        "all_pieces_in_goal": 169,
+        "anti_block_goal_full": 3
+      },
+      "score": 0.9534883720930233,
+      "wins": 164
+    },
+    {
+      "a": "iter060",
+      "b": "tt-pvs",
+      "draws": 13,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_core_s64/games/049_iter060_vs_tt-pvs.jsonl",
+      "losses": 38,
+      "reasons": {
+        "all_pieces_in_goal": 149,
+        "anti_block_goal_full": 10,
+        "equal_turn_goal_draw": 9,
+        "max_ply": 4
+      },
+      "score": 0.7412790697674418,
+      "wins": 121
+    },
+    {
+      "a": "iter060",
+      "b": "iter005",
+      "draws": 2,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_core_s64/games/050_iter060_vs_iter005.jsonl",
+      "losses": 3,
+      "reasons": {
+        "all_pieces_in_goal": 132,
+        "anti_block_goal_full": 38,
+        "equal_turn_goal_draw": 2
+      },
+      "score": 0.9767441860465116,
+      "wins": 167
+    },
+    {
+      "a": "iter060",
+      "b": "iter009",
+      "draws": 4,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_core_s64/games/051_iter060_vs_iter009.jsonl",
+      "losses": 9,
+      "reasons": {
+        "all_pieces_in_goal": 163,
+        "anti_block_goal_full": 5,
+        "equal_turn_goal_draw": 4
+      },
+      "score": 0.936046511627907,
+      "wins": 159
+    },
+    {
+      "a": "iter060",
+      "b": "iter029",
+      "draws": 2,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_core_s64/games/052_iter060_vs_iter029.jsonl",
+      "losses": 13,
+      "reasons": {
+        "all_pieces_in_goal": 168,
+        "anti_block_goal_full": 2,
+        "equal_turn_goal_draw": 2
+      },
+      "score": 0.9186046511627907,
+      "wins": 157
+    },
+    {
+      "a": "iter060",
+      "b": "iter046",
+      "draws": 10,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_core_s64/games/053_iter060_vs_iter046.jsonl",
+      "losses": 22,
+      "reasons": {
+        "all_pieces_in_goal": 158,
+        "anti_block_goal_full": 4,
+        "equal_turn_goal_draw": 10
+      },
+      "score": 0.8430232558139535,
+      "wins": 140
+    },
+    {
+      "a": "iter060",
+      "b": "iter057",
+      "draws": 22,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_core_s64/games/054_iter060_vs_iter057.jsonl",
+      "losses": 41,
+      "reasons": {
+        "all_pieces_in_goal": 148,
+        "anti_block_goal_full": 2,
+        "equal_turn_goal_draw": 22
+      },
+      "score": 0.6976744186046512,
+      "wins": 109
+    },
+    {
+      "a": "iter061",
+      "b": "random",
+      "draws": 13,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_core_s64/games/055_iter061_vs_random.jsonl",
+      "losses": 0,
+      "reasons": {
+        "all_pieces_in_goal": 5,
+        "anti_block_goal_full": 154,
+        "max_ply": 13
+      },
+      "score": 0.9622093023255814,
+      "wins": 159
+    },
+    {
+      "a": "iter061",
+      "b": "greedy",
+      "draws": 1,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_core_s64/games/056_iter061_vs_greedy.jsonl",
+      "losses": 5,
+      "reasons": {
+        "all_pieces_in_goal": 154,
+        "anti_block_goal_full": 17,
+        "equal_turn_goal_draw": 1
+      },
+      "score": 0.9680232558139535,
+      "wins": 166
+    },
+    {
+      "a": "iter061",
+      "b": "traffic-greedy",
+      "draws": 2,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_core_s64/games/057_iter061_vs_traffic-greedy.jsonl",
+      "losses": 1,
+      "reasons": {
+        "all_pieces_in_goal": 88,
+        "anti_block_goal_full": 82,
+        "equal_turn_goal_draw": 2
+      },
+      "score": 0.9883720930232558,
+      "wins": 169
+    },
+    {
+      "a": "iter061",
+      "b": "converter",
+      "draws": 0,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_core_s64/games/058_iter061_vs_converter.jsonl",
+      "losses": 7,
+      "reasons": {
+        "all_pieces_in_goal": 171,
+        "anti_block_goal_full": 1
+      },
+      "score": 0.9593023255813954,
+      "wins": 165
+    },
+    {
+      "a": "iter061",
+      "b": "tt-pvs",
+      "draws": 13,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_core_s64/games/059_iter061_vs_tt-pvs.jsonl",
+      "losses": 50,
+      "reasons": {
+        "all_pieces_in_goal": 140,
+        "anti_block_goal_full": 19,
+        "equal_turn_goal_draw": 10,
+        "max_ply": 3
+      },
+      "score": 0.6715116279069767,
+      "wins": 109
+    },
+    {
+      "a": "iter061",
+      "b": "iter005",
+      "draws": 2,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_core_s64/games/060_iter061_vs_iter005.jsonl",
+      "losses": 7,
+      "reasons": {
+        "all_pieces_in_goal": 150,
+        "anti_block_goal_full": 20,
+        "equal_turn_goal_draw": 2
+      },
+      "score": 0.9534883720930233,
+      "wins": 163
+    },
+    {
+      "a": "iter061",
+      "b": "iter009",
+      "draws": 4,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_core_s64/games/061_iter061_vs_iter009.jsonl",
+      "losses": 9,
+      "reasons": {
+        "all_pieces_in_goal": 158,
+        "anti_block_goal_full": 10,
+        "equal_turn_goal_draw": 4
+      },
+      "score": 0.936046511627907,
+      "wins": 159
+    },
+    {
+      "a": "iter061",
+      "b": "iter029",
+      "draws": 8,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_core_s64/games/062_iter061_vs_iter029.jsonl",
+      "losses": 15,
+      "reasons": {
+        "all_pieces_in_goal": 159,
+        "anti_block_goal_full": 5,
+        "equal_turn_goal_draw": 8
+      },
+      "score": 0.8895348837209303,
+      "wins": 149
+    },
+    {
+      "a": "iter061",
+      "b": "iter046",
+      "draws": 6,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_core_s64/games/063_iter061_vs_iter046.jsonl",
+      "losses": 21,
+      "reasons": {
+        "all_pieces_in_goal": 159,
+        "anti_block_goal_full": 7,
+        "equal_turn_goal_draw": 6
+      },
+      "score": 0.8604651162790697,
+      "wins": 145
+    },
+    {
+      "a": "iter061",
+      "b": "iter057",
+      "draws": 32,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_core_s64/games/064_iter061_vs_iter057.jsonl",
+      "losses": 59,
+      "reasons": {
+        "all_pieces_in_goal": 138,
+        "anti_block_goal_full": 2,
+        "equal_turn_goal_draw": 32
+      },
+      "score": 0.563953488372093,
+      "wins": 81
+    },
+    {
+      "a": "iter061",
+      "b": "iter060",
+      "draws": 26,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_core_s64/games/065_iter061_vs_iter060.jsonl",
+      "losses": 77,
+      "reasons": {
+        "all_pieces_in_goal": 145,
+        "anti_block_goal_full": 1,
+        "equal_turn_goal_draw": 26
+      },
+      "score": 0.47674418604651164,
+      "wins": 69
+    },
+    {
+      "a": "iter062",
+      "b": "random",
+      "draws": 15,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_core_s64/games/066_iter062_vs_random.jsonl",
+      "losses": 0,
+      "reasons": {
+        "all_pieces_in_goal": 6,
+        "anti_block_goal_full": 151,
+        "max_ply": 15
+      },
+      "score": 0.9563953488372093,
+      "wins": 157
+    },
+    {
+      "a": "iter062",
+      "b": "greedy",
+      "draws": 4,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_core_s64/games/067_iter062_vs_greedy.jsonl",
+      "losses": 9,
+      "reasons": {
+        "all_pieces_in_goal": 153,
+        "anti_block_goal_full": 15,
+        "equal_turn_goal_draw": 4
+      },
+      "score": 0.936046511627907,
+      "wins": 159
+    },
+    {
+      "a": "iter062",
+      "b": "traffic-greedy",
+      "draws": 2,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_core_s64/games/068_iter062_vs_traffic-greedy.jsonl",
+      "losses": 2,
+      "reasons": {
+        "all_pieces_in_goal": 110,
+        "anti_block_goal_full": 60,
+        "equal_turn_goal_draw": 2
+      },
+      "score": 0.9825581395348837,
+      "wins": 168
+    },
+    {
+      "a": "iter062",
+      "b": "converter",
+      "draws": 1,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_core_s64/games/069_iter062_vs_converter.jsonl",
+      "losses": 17,
+      "reasons": {
+        "all_pieces_in_goal": 167,
+        "anti_block_goal_full": 4,
+        "equal_turn_goal_draw": 1
+      },
+      "score": 0.8982558139534884,
+      "wins": 154
+    },
+    {
+      "a": "iter062",
+      "b": "tt-pvs",
+      "draws": 9,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_core_s64/games/070_iter062_vs_tt-pvs.jsonl",
+      "losses": 55,
+      "reasons": {
+        "all_pieces_in_goal": 149,
+        "anti_block_goal_full": 14,
+        "equal_turn_goal_draw": 5,
+        "max_ply": 4
+      },
+      "score": 0.6540697674418605,
+      "wins": 108
+    },
+    {
+      "a": "iter062",
+      "b": "iter005",
+      "draws": 28,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_core_s64/games/071_iter062_vs_iter005.jsonl",
+      "losses": 13,
+      "reasons": {
+        "all_pieces_in_goal": 129,
+        "anti_block_goal_full": 15,
+        "equal_turn_goal_draw": 28
+      },
+      "score": 0.8430232558139535,
+      "wins": 131
+    },
+    {
+      "a": "iter062",
+      "b": "iter009",
+      "draws": 6,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_core_s64/games/072_iter062_vs_iter009.jsonl",
+      "losses": 17,
+      "reasons": {
+        "all_pieces_in_goal": 162,
+        "anti_block_goal_full": 4,
+        "equal_turn_goal_draw": 6
+      },
+      "score": 0.8837209302325582,
+      "wins": 149
+    },
+    {
+      "a": "iter062",
+      "b": "iter029",
+      "draws": 6,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_core_s64/games/073_iter062_vs_iter029.jsonl",
+      "losses": 16,
+      "reasons": {
+        "all_pieces_in_goal": 161,
+        "anti_block_goal_full": 5,
+        "equal_turn_goal_draw": 6
+      },
+      "score": 0.8895348837209303,
+      "wins": 150
+    },
+    {
+      "a": "iter062",
+      "b": "iter046",
+      "draws": 39,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_core_s64/games/074_iter062_vs_iter046.jsonl",
+      "losses": 25,
+      "reasons": {
+        "all_pieces_in_goal": 131,
+        "anti_block_goal_full": 2,
+        "equal_turn_goal_draw": 39
+      },
+      "score": 0.7412790697674418,
+      "wins": 108
+    },
+    {
+      "a": "iter062",
+      "b": "iter057",
+      "draws": 17,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_core_s64/games/075_iter062_vs_iter057.jsonl",
+      "losses": 60,
+      "reasons": {
+        "all_pieces_in_goal": 153,
+        "anti_block_goal_full": 2,
+        "equal_turn_goal_draw": 17
+      },
+      "score": 0.6017441860465116,
+      "wins": 95
+    },
+    {
+      "a": "iter062",
+      "b": "iter060",
+      "draws": 44,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_core_s64/games/076_iter062_vs_iter060.jsonl",
+      "losses": 79,
+      "reasons": {
+        "all_pieces_in_goal": 127,
+        "anti_block_goal_full": 1,
+        "equal_turn_goal_draw": 44
+      },
+      "score": 0.4127906976744186,
+      "wins": 49
+    },
+    {
+      "a": "iter062",
+      "b": "iter061",
+      "draws": 52,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_core_s64/games/077_iter062_vs_iter061.jsonl",
+      "losses": 53,
+      "reasons": {
+        "all_pieces_in_goal": 120,
+        "equal_turn_goal_draw": 52
+      },
+      "score": 0.5406976744186046,
+      "wins": 67
+    },
+    {
+      "a": "iter063",
+      "b": "random",
+      "draws": 12,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_core_s64/games/078_iter063_vs_random.jsonl",
+      "losses": 0,
+      "reasons": {
+        "all_pieces_in_goal": 2,
+        "anti_block_goal_full": 158,
+        "max_ply": 12
+      },
+      "score": 0.9651162790697675,
+      "wins": 160
+    },
+    {
+      "a": "iter063",
+      "b": "greedy",
+      "draws": 2,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_core_s64/games/079_iter063_vs_greedy.jsonl",
+      "losses": 7,
+      "reasons": {
+        "all_pieces_in_goal": 154,
+        "anti_block_goal_full": 16,
+        "equal_turn_goal_draw": 2
+      },
+      "score": 0.9534883720930233,
+      "wins": 163
+    },
+    {
+      "a": "iter063",
+      "b": "traffic-greedy",
+      "draws": 5,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_core_s64/games/080_iter063_vs_traffic-greedy.jsonl",
+      "losses": 1,
+      "reasons": {
+        "all_pieces_in_goal": 99,
+        "anti_block_goal_full": 68,
+        "equal_turn_goal_draw": 4,
+        "max_ply": 1
+      },
+      "score": 0.9796511627906976,
+      "wins": 166
+    },
+    {
+      "a": "iter063",
+      "b": "converter",
+      "draws": 1,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_core_s64/games/081_iter063_vs_converter.jsonl",
+      "losses": 5,
+      "reasons": {
+        "all_pieces_in_goal": 166,
+        "anti_block_goal_full": 5,
+        "equal_turn_goal_draw": 1
+      },
+      "score": 0.9680232558139535,
+      "wins": 166
+    },
+    {
+      "a": "iter063",
+      "b": "tt-pvs",
+      "draws": 11,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_core_s64/games/082_iter063_vs_tt-pvs.jsonl",
+      "losses": 49,
+      "reasons": {
+        "all_pieces_in_goal": 140,
+        "anti_block_goal_full": 21,
+        "equal_turn_goal_draw": 8,
+        "max_ply": 3
+      },
+      "score": 0.6831395348837209,
+      "wins": 112
+    },
+    {
+      "a": "iter063",
+      "b": "iter005",
+      "draws": 2,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_core_s64/games/083_iter063_vs_iter005.jsonl",
+      "losses": 6,
+      "reasons": {
+        "all_pieces_in_goal": 159,
+        "anti_block_goal_full": 11,
+        "equal_turn_goal_draw": 2
+      },
+      "score": 0.9593023255813954,
+      "wins": 164
+    },
+    {
+      "a": "iter063",
+      "b": "iter009",
+      "draws": 7,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_core_s64/games/084_iter063_vs_iter009.jsonl",
+      "losses": 32,
+      "reasons": {
+        "all_pieces_in_goal": 156,
+        "anti_block_goal_full": 9,
+        "equal_turn_goal_draw": 7
+      },
+      "score": 0.7936046511627907,
+      "wins": 133
+    },
+    {
+      "a": "iter063",
+      "b": "iter029",
+      "draws": 7,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_core_s64/games/085_iter063_vs_iter029.jsonl",
+      "losses": 14,
+      "reasons": {
+        "all_pieces_in_goal": 161,
+        "anti_block_goal_full": 4,
+        "equal_turn_goal_draw": 7
+      },
+      "score": 0.8982558139534884,
+      "wins": 151
+    },
+    {
+      "a": "iter063",
+      "b": "iter046",
+      "draws": 9,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_core_s64/games/086_iter063_vs_iter046.jsonl",
+      "losses": 17,
+      "reasons": {
+        "all_pieces_in_goal": 160,
+        "anti_block_goal_full": 3,
+        "equal_turn_goal_draw": 9
+      },
+      "score": 0.875,
+      "wins": 146
+    },
+    {
+      "a": "iter063",
+      "b": "iter057",
+      "draws": 14,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_core_s64/games/087_iter063_vs_iter057.jsonl",
+      "losses": 58,
+      "reasons": {
+        "all_pieces_in_goal": 157,
+        "anti_block_goal_full": 1,
+        "equal_turn_goal_draw": 14
+      },
+      "score": 0.622093023255814,
+      "wins": 100
+    },
+    {
+      "a": "iter063",
+      "b": "iter060",
+      "draws": 55,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_core_s64/games/088_iter063_vs_iter060.jsonl",
+      "losses": 66,
+      "reasons": {
+        "all_pieces_in_goal": 116,
+        "anti_block_goal_full": 1,
+        "equal_turn_goal_draw": 55
+      },
+      "score": 0.4563953488372093,
+      "wins": 51
+    },
+    {
+      "a": "iter063",
+      "b": "iter061",
+      "draws": 50,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_core_s64/games/089_iter063_vs_iter061.jsonl",
+      "losses": 44,
+      "reasons": {
+        "all_pieces_in_goal": 122,
+        "equal_turn_goal_draw": 50
+      },
+      "score": 0.5988372093023255,
+      "wins": 78
+    },
+    {
+      "a": "iter063",
+      "b": "iter062",
+      "draws": 43,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_core_s64/games/090_iter063_vs_iter062.jsonl",
+      "losses": 49,
+      "reasons": {
+        "all_pieces_in_goal": 128,
+        "anti_block_goal_full": 1,
+        "equal_turn_goal_draw": 43
+      },
+      "score": 0.5901162790697675,
+      "wins": 80
+    },
+    {
+      "a": "harryz-rule",
+      "b": "iter063",
+      "draws": 97,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_full_with_open_source_s64/normalized_existing/harryz-rule_vs_iter063.jsonl",
+      "losses": 75,
+      "reasons": {
+        "all_pieces_in_goal": 7,
+        "anti_block_goal_full": 68,
+        "max_ply": 97
+      },
+      "score": 0.2819767441860465,
+      "wins": 0
+    },
+    {
+      "a": "marblefish-ab",
+      "b": "iter063",
+      "draws": 41,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_full_with_open_source_s64/normalized_existing/marblefish-ab_vs_iter063.jsonl",
+      "losses": 123,
+      "reasons": {
+        "all_pieces_in_goal": 107,
+        "anti_block_goal_full": 24,
+        "equal_turn_goal_draw": 4,
+        "max_ply": 37
+      },
+      "score": 0.16569767441860464,
+      "wins": 8
+    },
+    {
+      "a": "zedrichu-minimax",
+      "b": "iter063",
+      "draws": 6,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_full_with_open_source_s64/normalized_existing/zedrichu-minimax_vs_iter063.jsonl",
+      "losses": 163,
+      "reasons": {
+        "all_pieces_in_goal": 157,
+        "anti_block_goal_full": 9,
+        "max_ply": 6
+      },
+      "score": 0.03488372093023256,
+      "wins": 3
+    },
+    {
+      "a": "harryz-rule",
+      "b": "iter060",
+      "draws": 99,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_full_with_open_source_s64/games/095_harryz-rule_vs_iter060.jsonl",
+      "losses": 73,
+      "reasons": {
+        "all_pieces_in_goal": 12,
+        "anti_block_goal_full": 61,
+        "max_ply": 99
+      },
+      "score": 0.2877906976744186,
+      "wins": 0
+    },
+    {
+      "a": "harryz-rule",
+      "b": "iter061",
+      "draws": 121,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_full_with_open_source_s64/games/096_harryz-rule_vs_iter061.jsonl",
+      "losses": 51,
+      "reasons": {
+        "all_pieces_in_goal": 11,
+        "anti_block_goal_full": 40,
+        "max_ply": 121
+      },
+      "score": 0.35174418604651164,
+      "wins": 0
+    },
+    {
+      "a": "harryz-rule",
+      "b": "iter062",
+      "draws": 99,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_full_with_open_source_s64/games/097_harryz-rule_vs_iter062.jsonl",
+      "losses": 73,
+      "reasons": {
+        "all_pieces_in_goal": 9,
+        "anti_block_goal_full": 64,
+        "max_ply": 99
+      },
+      "score": 0.2877906976744186,
+      "wins": 0
+    },
+    {
+      "a": "harryz-rule",
+      "b": "iter057",
+      "draws": 72,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_full_with_open_source_s64/games/098_harryz-rule_vs_iter057.jsonl",
+      "losses": 100,
+      "reasons": {
+        "all_pieces_in_goal": 8,
+        "anti_block_goal_full": 92,
+        "max_ply": 72
+      },
+      "score": 0.20930232558139536,
+      "wins": 0
+    },
+    {
+      "a": "harryz-rule",
+      "b": "tt-pvs",
+      "draws": 28,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_full_with_open_source_s64/games/099_harryz-rule_vs_tt-pvs.jsonl",
+      "losses": 144,
+      "reasons": {
+        "all_pieces_in_goal": 109,
+        "anti_block_goal_full": 35,
+        "max_ply": 28
+      },
+      "score": 0.08139534883720931,
+      "wins": 0
+    },
+    {
+      "a": "harryz-rule",
+      "b": "iter046",
+      "draws": 91,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_full_with_open_source_s64/games/100_harryz-rule_vs_iter046.jsonl",
+      "losses": 81,
+      "reasons": {
+        "all_pieces_in_goal": 13,
+        "anti_block_goal_full": 68,
+        "max_ply": 91
+      },
+      "score": 0.26453488372093026,
+      "wins": 0
+    },
+    {
+      "a": "harryz-rule",
+      "b": "iter029",
+      "draws": 90,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_full_with_open_source_s64/games/101_harryz-rule_vs_iter029.jsonl",
+      "losses": 82,
+      "reasons": {
+        "all_pieces_in_goal": 8,
+        "anti_block_goal_full": 74,
+        "max_ply": 90
+      },
+      "score": 0.2616279069767442,
+      "wins": 0
+    },
+    {
+      "a": "harryz-rule",
+      "b": "iter009",
+      "draws": 61,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_full_with_open_source_s64/games/102_harryz-rule_vs_iter009.jsonl",
+      "losses": 111,
+      "reasons": {
+        "all_pieces_in_goal": 18,
+        "anti_block_goal_full": 93,
+        "max_ply": 61
+      },
+      "score": 0.17732558139534885,
+      "wins": 0
+    },
+    {
+      "a": "harryz-rule",
+      "b": "converter",
+      "draws": 54,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_full_with_open_source_s64/games/103_harryz-rule_vs_converter.jsonl",
+      "losses": 118,
+      "reasons": {
+        "all_pieces_in_goal": 52,
+        "anti_block_goal_full": 66,
+        "max_ply": 54
+      },
+      "score": 0.1569767441860465,
+      "wins": 0
+    },
+    {
+      "a": "harryz-rule",
+      "b": "iter005",
+      "draws": 87,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_full_with_open_source_s64/games/104_harryz-rule_vs_iter005.jsonl",
+      "losses": 85,
+      "reasons": {
+        "all_pieces_in_goal": 39,
+        "anti_block_goal_full": 46,
+        "max_ply": 87
+      },
+      "score": 0.25290697674418605,
+      "wins": 0
+    },
+    {
+      "a": "harryz-rule",
+      "b": "greedy",
+      "draws": 0,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_full_with_open_source_s64/games/105_harryz-rule_vs_greedy.jsonl",
+      "losses": 172,
+      "reasons": {
+        "all_pieces_in_goal": 92,
+        "anti_block_goal_full": 80
+      },
+      "score": 0.0,
+      "wins": 0
+    },
+    {
+      "a": "harryz-rule",
+      "b": "traffic-greedy",
+      "draws": 23,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_full_with_open_source_s64/games/106_harryz-rule_vs_traffic-greedy.jsonl",
+      "losses": 149,
+      "reasons": {
+        "all_pieces_in_goal": 66,
+        "anti_block_goal_full": 83,
+        "max_ply": 23
+      },
+      "score": 0.06686046511627906,
+      "wins": 0
+    },
+    {
+      "a": "harryz-rule",
+      "b": "random",
+      "draws": 167,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_full_with_open_source_s64/games/107_harryz-rule_vs_random.jsonl",
+      "losses": 0,
+      "reasons": {
+        "anti_block_goal_full": 5,
+        "max_ply": 167
+      },
+      "score": 0.5145348837209303,
+      "wins": 5
+    },
+    {
+      "a": "marblefish-ab",
+      "b": "iter060",
+      "draws": 7,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_full_with_open_source_s64/games/108_marblefish-ab_vs_iter060.jsonl",
+      "losses": 161,
+      "reasons": {
+        "all_pieces_in_goal": 68,
+        "anti_block_goal_full": 11,
+        "equal_turn_goal_draw": 4,
+        "illegal_move": 85,
+        "max_ply": 3,
+        "protocol_error": 1
+      },
+      "score": 0.0436046511627907,
+      "wins": 4
+    },
+    {
+      "a": "marblefish-ab",
+      "b": "iter061",
+      "draws": 4,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_full_with_open_source_s64/games/109_marblefish-ab_vs_iter061.jsonl",
+      "losses": 157,
+      "reasons": {
+        "all_pieces_in_goal": 149,
+        "anti_block_goal_full": 19,
+        "equal_turn_goal_draw": 1,
+        "max_ply": 3
+      },
+      "score": 0.0755813953488372,
+      "wins": 11
+    },
+    {
+      "a": "marblefish-ab",
+      "b": "iter062",
+      "draws": 20,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_full_with_open_source_s64/games/110_marblefish-ab_vs_iter062.jsonl",
+      "losses": 150,
+      "reasons": {
+        "all_pieces_in_goal": 47,
+        "anti_block_goal_full": 4,
+        "equal_turn_goal_draw": 2,
+        "illegal_move": 100,
+        "max_ply": 18,
+        "protocol_error": 1
+      },
+      "score": 0.06976744186046512,
+      "wins": 2
+    },
+    {
+      "a": "marblefish-ab",
+      "b": "iter057",
+      "draws": 17,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_full_with_open_source_s64/games/111_marblefish-ab_vs_iter057.jsonl",
+      "losses": 147,
+      "reasons": {
+        "all_pieces_in_goal": 131,
+        "anti_block_goal_full": 24,
+        "equal_turn_goal_draw": 6,
+        "max_ply": 11
+      },
+      "score": 0.09593023255813954,
+      "wins": 8
+    },
+    {
+      "a": "marblefish-ab",
+      "b": "tt-pvs",
+      "draws": 27,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_full_with_open_source_s64/games/112_marblefish-ab_vs_tt-pvs.jsonl",
+      "losses": 100,
+      "reasons": {
+        "all_pieces_in_goal": 123,
+        "anti_block_goal_full": 22,
+        "equal_turn_goal_draw": 5,
+        "max_ply": 22
+      },
+      "score": 0.34011627906976744,
+      "wins": 45
+    },
+    {
+      "a": "marblefish-ab",
+      "b": "iter046",
+      "draws": 12,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_full_with_open_source_s64/games/113_marblefish-ab_vs_iter046.jsonl",
+      "losses": 147,
+      "reasons": {
+        "all_pieces_in_goal": 141,
+        "anti_block_goal_full": 19,
+        "equal_turn_goal_draw": 1,
+        "max_ply": 11
+      },
+      "score": 0.11046511627906977,
+      "wins": 13
+    },
+    {
+      "a": "marblefish-ab",
+      "b": "iter029",
+      "draws": 14,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_full_with_open_source_s64/games/114_marblefish-ab_vs_iter029.jsonl",
+      "losses": 141,
+      "reasons": {
+        "all_pieces_in_goal": 90,
+        "anti_block_goal_full": 36,
+        "equal_turn_goal_draw": 2,
+        "illegal_move": 31,
+        "max_ply": 12,
+        "protocol_error": 1
+      },
+      "score": 0.13953488372093023,
+      "wins": 17
+    },
+    {
+      "a": "marblefish-ab",
+      "b": "iter009",
+      "draws": 38,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_full_with_open_source_s64/games/115_marblefish-ab_vs_iter009.jsonl",
+      "losses": 65,
+      "reasons": {
+        "all_pieces_in_goal": 105,
+        "anti_block_goal_full": 29,
+        "equal_turn_goal_draw": 1,
+        "max_ply": 37
+      },
+      "score": 0.5116279069767442,
+      "wins": 69
+    },
+    {
+      "a": "marblefish-ab",
+      "b": "converter",
+      "draws": 4,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_full_with_open_source_s64/games/116_marblefish-ab_vs_converter.jsonl",
+      "losses": 105,
+      "reasons": {
+        "all_pieces_in_goal": 145,
+        "anti_block_goal_full": 23,
+        "equal_turn_goal_draw": 2,
+        "max_ply": 2
+      },
+      "score": 0.37790697674418605,
+      "wins": 63
+    },
+    {
+      "a": "marblefish-ab",
+      "b": "iter005",
+      "draws": 9,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_full_with_open_source_s64/games/117_marblefish-ab_vs_iter005.jsonl",
+      "losses": 137,
+      "reasons": {
+        "all_pieces_in_goal": 48,
+        "anti_block_goal_full": 37,
+        "equal_turn_goal_draw": 1,
+        "illegal_move": 77,
+        "max_ply": 8,
+        "protocol_error": 1
+      },
+      "score": 0.17732558139534885,
+      "wins": 26
+    },
+    {
+      "a": "marblefish-ab",
+      "b": "greedy",
+      "draws": 3,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_full_with_open_source_s64/games/118_marblefish-ab_vs_greedy.jsonl",
+      "losses": 125,
+      "reasons": {
+        "all_pieces_in_goal": 84,
+        "anti_block_goal_full": 19,
+        "equal_turn_goal_draw": 3,
+        "illegal_move": 65,
+        "protocol_error": 1
+      },
+      "score": 0.26453488372093026,
+      "wins": 44
+    },
+    {
+      "a": "marblefish-ab",
+      "b": "traffic-greedy",
+      "draws": 9,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_full_with_open_source_s64/games/119_marblefish-ab_vs_traffic-greedy.jsonl",
+      "losses": 42,
+      "reasons": {
+        "all_pieces_in_goal": 119,
+        "anti_block_goal_full": 44,
+        "equal_turn_goal_draw": 1,
+        "max_ply": 8
+      },
+      "score": 0.7296511627906976,
+      "wins": 121
+    },
+    {
+      "a": "marblefish-ab",
+      "b": "random",
+      "draws": 1,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_full_with_open_source_s64/games/120_marblefish-ab_vs_random.jsonl",
+      "losses": 0,
+      "reasons": {
+        "all_pieces_in_goal": 4,
+        "anti_block_goal_full": 167,
+        "max_ply": 1
+      },
+      "score": 0.997093023255814,
+      "wins": 171
+    },
+    {
+      "a": "zedrichu-minimax",
+      "b": "iter060",
+      "draws": 7,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_full_with_open_source_s64/games/121_zedrichu-minimax_vs_iter060.jsonl",
+      "losses": 160,
+      "reasons": {
+        "all_pieces_in_goal": 156,
+        "anti_block_goal_full": 9,
+        "max_ply": 7
+      },
+      "score": 0.04941860465116279,
+      "wins": 5
+    },
+    {
+      "a": "zedrichu-minimax",
+      "b": "iter061",
+      "draws": 9,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_full_with_open_source_s64/games/122_zedrichu-minimax_vs_iter061.jsonl",
+      "losses": 159,
+      "reasons": {
+        "all_pieces_in_goal": 157,
+        "anti_block_goal_full": 6,
+        "max_ply": 9
+      },
+      "score": 0.04941860465116279,
+      "wins": 4
+    },
+    {
+      "a": "zedrichu-minimax",
+      "b": "iter062",
+      "draws": 10,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_full_with_open_source_s64/games/123_zedrichu-minimax_vs_iter062.jsonl",
+      "losses": 159,
+      "reasons": {
+        "all_pieces_in_goal": 156,
+        "anti_block_goal_full": 6,
+        "max_ply": 10
+      },
+      "score": 0.046511627906976744,
+      "wins": 3
+    },
+    {
+      "a": "zedrichu-minimax",
+      "b": "iter057",
+      "draws": 37,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_full_with_open_source_s64/games/124_zedrichu-minimax_vs_iter057.jsonl",
+      "losses": 131,
+      "reasons": {
+        "all_pieces_in_goal": 124,
+        "anti_block_goal_full": 11,
+        "max_ply": 37
+      },
+      "score": 0.1308139534883721,
+      "wins": 4
+    },
+    {
+      "a": "zedrichu-minimax",
+      "b": "tt-pvs",
+      "draws": 23,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_full_with_open_source_s64/games/125_zedrichu-minimax_vs_tt-pvs.jsonl",
+      "losses": 139,
+      "reasons": {
+        "all_pieces_in_goal": 140,
+        "anti_block_goal_full": 9,
+        "max_ply": 23
+      },
+      "score": 0.125,
+      "wins": 10
+    },
+    {
+      "a": "zedrichu-minimax",
+      "b": "iter046",
+      "draws": 41,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_full_with_open_source_s64/games/126_zedrichu-minimax_vs_iter046.jsonl",
+      "losses": 120,
+      "reasons": {
+        "all_pieces_in_goal": 112,
+        "anti_block_goal_full": 19,
+        "max_ply": 41
+      },
+      "score": 0.18313953488372092,
+      "wins": 11
+    },
+    {
+      "a": "zedrichu-minimax",
+      "b": "iter029",
+      "draws": 51,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_full_with_open_source_s64/games/127_zedrichu-minimax_vs_iter029.jsonl",
+      "losses": 113,
+      "reasons": {
+        "all_pieces_in_goal": 114,
+        "anti_block_goal_full": 7,
+        "max_ply": 51
+      },
+      "score": 0.19476744186046513,
+      "wins": 8
+    },
+    {
+      "a": "zedrichu-minimax",
+      "b": "iter009",
+      "draws": 97,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_full_with_open_source_s64/games/128_zedrichu-minimax_vs_iter009.jsonl",
+      "losses": 65,
+      "reasons": {
+        "all_pieces_in_goal": 68,
+        "anti_block_goal_full": 7,
+        "max_ply": 97
+      },
+      "score": 0.34011627906976744,
+      "wins": 10
+    },
+    {
+      "a": "zedrichu-minimax",
+      "b": "converter",
+      "draws": 9,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_full_with_open_source_s64/games/129_zedrichu-minimax_vs_converter.jsonl",
+      "losses": 157,
+      "reasons": {
+        "all_pieces_in_goal": 158,
+        "anti_block_goal_full": 5,
+        "max_ply": 9
+      },
+      "score": 0.061046511627906974,
+      "wins": 6
+    },
+    {
+      "a": "zedrichu-minimax",
+      "b": "iter005",
+      "draws": 79,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_full_with_open_source_s64/games/130_zedrichu-minimax_vs_iter005.jsonl",
+      "losses": 74,
+      "reasons": {
+        "all_pieces_in_goal": 74,
+        "anti_block_goal_full": 19,
+        "max_ply": 79
+      },
+      "score": 0.34011627906976744,
+      "wins": 19
+    },
+    {
+      "a": "zedrichu-minimax",
+      "b": "greedy",
+      "draws": 19,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_full_with_open_source_s64/games/131_zedrichu-minimax_vs_greedy.jsonl",
+      "losses": 136,
+      "reasons": {
+        "all_pieces_in_goal": 137,
+        "anti_block_goal_full": 16,
+        "max_ply": 19
+      },
+      "score": 0.15406976744186046,
+      "wins": 17
+    },
+    {
+      "a": "zedrichu-minimax",
+      "b": "traffic-greedy",
+      "draws": 53,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_full_with_open_source_s64/games/132_zedrichu-minimax_vs_traffic-greedy.jsonl",
+      "losses": 51,
+      "reasons": {
+        "all_pieces_in_goal": 51,
+        "anti_block_goal_full": 68,
+        "max_ply": 53
+      },
+      "score": 0.5494186046511628,
+      "wins": 68
+    },
+    {
+      "a": "zedrichu-minimax",
+      "b": "random",
+      "draws": 3,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_full_with_open_source_s64/games/133_zedrichu-minimax_vs_random.jsonl",
+      "losses": 0,
+      "reasons": {
+        "anti_block_goal_full": 169,
+        "max_ply": 3
+      },
+      "score": 0.9912790697674418,
+      "wins": 169
+    },
+    {
+      "a": "marblefish-ab",
+      "b": "harryz-rule",
+      "draws": 109,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_full_with_open_source_s64/games/147_marblefish-ab_vs_harryz-rule.jsonl",
+      "losses": 0,
+      "reasons": {
+        "all_pieces_in_goal": 47,
+        "anti_block_goal_full": 16,
+        "max_ply": 109
+      },
+      "score": 0.6831395348837209,
+      "wins": 63
+    },
+    {
+      "a": "zedrichu-minimax",
+      "b": "harryz-rule",
+      "draws": 124,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_full_with_open_source_s64/games/148_zedrichu-minimax_vs_harryz-rule.jsonl",
+      "losses": 0,
+      "reasons": {
+        "all_pieces_in_goal": 1,
+        "anti_block_goal_full": 47,
+        "max_ply": 124
+      },
+      "score": 0.6395348837209303,
+      "wins": 48
+    },
+    {
+      "a": "zedrichu-minimax",
+      "b": "marblefish-ab",
+      "draws": 114,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_full_with_open_source_s64/games/149_zedrichu-minimax_vs_marblefish-ab.jsonl",
+      "losses": 46,
+      "reasons": {
+        "all_pieces_in_goal": 42,
+        "anti_block_goal_full": 16,
+        "max_ply": 114
+      },
+      "score": 0.4011627906976744,
+      "wins": 12
+    },
+    {
+      "a": "iter064",
+      "b": "iter060",
+      "draws": 19,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_latest_champions_s64/games/136_iter064_vs_iter060.jsonl",
+      "losses": 59,
+      "reasons": {
+        "all_pieces_in_goal": 148,
+        "anti_block_goal_full": 5,
+        "equal_turn_goal_draw": 19
+      },
+      "score": 0.6017441860465116,
+      "wins": 94
+    },
+    {
+      "a": "iter064",
+      "b": "iter063",
+      "draws": 41,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_latest_champions_s64/games/137_iter064_vs_iter063.jsonl",
+      "losses": 55,
+      "reasons": {
+        "all_pieces_in_goal": 130,
+        "anti_block_goal_full": 1,
+        "equal_turn_goal_draw": 41
+      },
+      "score": 0.561046511627907,
+      "wins": 76
+    },
+    {
+      "a": "iter064",
+      "b": "iter061",
+      "draws": 21,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_latest_champions_s64/games/138_iter064_vs_iter061.jsonl",
+      "losses": 76,
+      "reasons": {
+        "all_pieces_in_goal": 150,
+        "anti_block_goal_full": 1,
+        "equal_turn_goal_draw": 20,
+        "max_ply": 1
+      },
+      "score": 0.49709302325581395,
+      "wins": 75
+    },
+    {
+      "a": "iter064",
+      "b": "iter062",
+      "draws": 52,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_latest_champions_s64/games/139_iter064_vs_iter062.jsonl",
+      "losses": 70,
+      "reasons": {
+        "all_pieces_in_goal": 118,
+        "anti_block_goal_full": 2,
+        "equal_turn_goal_draw": 50,
+        "max_ply": 2
+      },
+      "score": 0.4418604651162791,
+      "wins": 50
+    },
+    {
+      "a": "iter064",
+      "b": "iter057",
+      "draws": 16,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_latest_champions_s64/games/140_iter064_vs_iter057.jsonl",
+      "losses": 35,
+      "reasons": {
+        "all_pieces_in_goal": 155,
+        "anti_block_goal_full": 1,
+        "equal_turn_goal_draw": 16
+      },
+      "score": 0.75,
+      "wins": 121
+    },
+    {
+      "a": "iter064",
+      "b": "tt-pvs",
+      "draws": 8,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_latest_champions_s64/games/141_iter064_vs_tt-pvs.jsonl",
+      "losses": 52,
+      "reasons": {
+        "all_pieces_in_goal": 144,
+        "anti_block_goal_full": 20,
+        "equal_turn_goal_draw": 4,
+        "max_ply": 4
+      },
+      "score": 0.6744186046511628,
+      "wins": 112
+    },
+    {
+      "a": "iter064",
+      "b": "iter046",
+      "draws": 9,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_latest_champions_s64/games/142_iter064_vs_iter046.jsonl",
+      "losses": 22,
+      "reasons": {
+        "all_pieces_in_goal": 160,
+        "anti_block_goal_full": 3,
+        "equal_turn_goal_draw": 9
+      },
+      "score": 0.8459302325581395,
+      "wins": 141
+    },
+    {
+      "a": "iter064",
+      "b": "iter029",
+      "draws": 37,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_latest_champions_s64/games/143_iter064_vs_iter029.jsonl",
+      "losses": 40,
+      "reasons": {
+        "all_pieces_in_goal": 133,
+        "anti_block_goal_full": 2,
+        "equal_turn_goal_draw": 37
+      },
+      "score": 0.6598837209302325,
+      "wins": 95
+    },
+    {
+      "a": "iter064",
+      "b": "converter",
+      "draws": 2,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_latest_champions_s64/games/144_iter064_vs_converter.jsonl",
+      "losses": 6,
+      "reasons": {
+        "all_pieces_in_goal": 168,
+        "anti_block_goal_full": 2,
+        "equal_turn_goal_draw": 2
+      },
+      "score": 0.9593023255813954,
+      "wins": 164
+    },
+    {
+      "a": "iter064",
+      "b": "iter009",
+      "draws": 9,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_latest_champions_s64/games/145_iter064_vs_iter009.jsonl",
+      "losses": 12,
+      "reasons": {
+        "all_pieces_in_goal": 129,
+        "anti_block_goal_full": 34,
+        "equal_turn_goal_draw": 6,
+        "max_ply": 3
+      },
+      "score": 0.9040697674418605,
+      "wins": 151
+    },
+    {
+      "a": "iter064",
+      "b": "iter005",
+      "draws": 5,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_latest_champions_s64/games/146_iter064_vs_iter005.jsonl",
+      "losses": 6,
+      "reasons": {
+        "all_pieces_in_goal": 156,
+        "anti_block_goal_full": 11,
+        "equal_turn_goal_draw": 5
+      },
+      "score": 0.9505813953488372,
+      "wins": 161
+    },
+    {
+      "a": "iter064",
+      "b": "greedy",
+      "draws": 1,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_latest_champions_s64/games/147_iter064_vs_greedy.jsonl",
+      "losses": 4,
+      "reasons": {
+        "all_pieces_in_goal": 160,
+        "anti_block_goal_full": 11,
+        "equal_turn_goal_draw": 1
+      },
+      "score": 0.9738372093023255,
+      "wins": 167
+    },
+    {
+      "a": "iter064",
+      "b": "marblefish-ab",
+      "draws": 16,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_latest_champions_s64/games/148_iter064_vs_marblefish-ab.jsonl",
+      "losses": 9,
+      "reasons": {
+        "all_pieces_in_goal": 144,
+        "anti_block_goal_full": 12,
+        "equal_turn_goal_draw": 3,
+        "max_ply": 13
+      },
+      "score": 0.9011627906976745,
+      "wins": 147
+    },
+    {
+      "a": "iter064",
+      "b": "zedrichu-minimax",
+      "draws": 5,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_latest_champions_s64/games/149_iter064_vs_zedrichu-minimax.jsonl",
+      "losses": 1,
+      "reasons": {
+        "all_pieces_in_goal": 160,
+        "anti_block_goal_full": 7,
+        "max_ply": 5
+      },
+      "score": 0.9796511627906976,
+      "wins": 166
+    },
+    {
+      "a": "iter064",
+      "b": "harryz-rule",
+      "draws": 126,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_latest_champions_s64/games/150_iter064_vs_harryz-rule.jsonl",
+      "losses": 0,
+      "reasons": {
+        "all_pieces_in_goal": 7,
+        "anti_block_goal_full": 39,
+        "max_ply": 126
+      },
+      "score": 0.6337209302325582,
+      "wins": 46
+    },
+    {
+      "a": "iter064",
+      "b": "traffic-greedy",
+      "draws": 8,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_latest_champions_s64/games/151_iter064_vs_traffic-greedy.jsonl",
+      "losses": 3,
+      "reasons": {
+        "all_pieces_in_goal": 100,
+        "anti_block_goal_full": 64,
+        "equal_turn_goal_draw": 2,
+        "max_ply": 6
+      },
+      "score": 0.9593023255813954,
+      "wins": 161
+    },
+    {
+      "a": "iter064",
+      "b": "random",
+      "draws": 7,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_latest_champions_s64/games/152_iter064_vs_random.jsonl",
+      "losses": 0,
+      "reasons": {
+        "all_pieces_in_goal": 3,
+        "anti_block_goal_full": 162,
+        "max_ply": 7
+      },
+      "score": 0.9796511627906976,
+      "wins": 165
+    },
+    {
+      "a": "iter082",
+      "b": "iter060",
+      "draws": 48,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_latest_champions_s64/games/153_iter082_vs_iter060.jsonl",
+      "losses": 52,
+      "reasons": {
+        "all_pieces_in_goal": 124,
+        "equal_turn_goal_draw": 48
+      },
+      "score": 0.5581395348837209,
+      "wins": 72
+    },
+    {
+      "a": "iter082",
+      "b": "iter063",
+      "draws": 75,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_latest_champions_s64/games/154_iter082_vs_iter063.jsonl",
+      "losses": 48,
+      "reasons": {
+        "all_pieces_in_goal": 95,
+        "anti_block_goal_full": 2,
+        "equal_turn_goal_draw": 75
+      },
+      "score": 0.502906976744186,
+      "wins": 49
+    },
+    {
+      "a": "iter082",
+      "b": "iter061",
+      "draws": 78,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_latest_champions_s64/games/155_iter082_vs_iter061.jsonl",
+      "losses": 45,
+      "reasons": {
+        "all_pieces_in_goal": 92,
+        "anti_block_goal_full": 2,
+        "equal_turn_goal_draw": 78
+      },
+      "score": 0.5116279069767442,
+      "wins": 49
+    },
+    {
+      "a": "iter082",
+      "b": "iter062",
+      "draws": 44,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_latest_champions_s64/games/156_iter082_vs_iter062.jsonl",
+      "losses": 79,
+      "reasons": {
+        "all_pieces_in_goal": 127,
+        "anti_block_goal_full": 1,
+        "equal_turn_goal_draw": 44
+      },
+      "score": 0.4127906976744186,
+      "wins": 49
+    },
+    {
+      "a": "iter082",
+      "b": "iter057",
+      "draws": 24,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_latest_champions_s64/games/157_iter082_vs_iter057.jsonl",
+      "losses": 34,
+      "reasons": {
+        "all_pieces_in_goal": 143,
+        "anti_block_goal_full": 5,
+        "equal_turn_goal_draw": 24
+      },
+      "score": 0.7325581395348837,
+      "wins": 114
+    },
+    {
+      "a": "iter082",
+      "b": "tt-pvs",
+      "draws": 16,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_latest_champions_s64/games/158_iter082_vs_tt-pvs.jsonl",
+      "losses": 32,
+      "reasons": {
+        "all_pieces_in_goal": 144,
+        "anti_block_goal_full": 12,
+        "equal_turn_goal_draw": 8,
+        "max_ply": 8
+      },
+      "score": 0.7674418604651163,
+      "wins": 124
+    },
+    {
+      "a": "iter082",
+      "b": "iter046",
+      "draws": 37,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_latest_champions_s64/games/159_iter082_vs_iter046.jsonl",
+      "losses": 19,
+      "reasons": {
+        "all_pieces_in_goal": 132,
+        "anti_block_goal_full": 3,
+        "equal_turn_goal_draw": 37
+      },
+      "score": 0.7819767441860465,
+      "wins": 116
+    },
+    {
+      "a": "iter082",
+      "b": "iter029",
+      "draws": 15,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_latest_champions_s64/games/160_iter082_vs_iter029.jsonl",
+      "losses": 8,
+      "reasons": {
+        "all_pieces_in_goal": 150,
+        "anti_block_goal_full": 7,
+        "equal_turn_goal_draw": 15
+      },
+      "score": 0.9098837209302325,
+      "wins": 149
+    },
+    {
+      "a": "iter082",
+      "b": "converter",
+      "draws": 4,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_latest_champions_s64/games/161_iter082_vs_converter.jsonl",
+      "losses": 6,
+      "reasons": {
+        "all_pieces_in_goal": 166,
+        "anti_block_goal_full": 2,
+        "equal_turn_goal_draw": 4
+      },
+      "score": 0.9534883720930233,
+      "wins": 162
+    },
+    {
+      "a": "iter082",
+      "b": "iter009",
+      "draws": 30,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_latest_champions_s64/games/162_iter082_vs_iter009.jsonl",
+      "losses": 8,
+      "reasons": {
+        "all_pieces_in_goal": 132,
+        "anti_block_goal_full": 10,
+        "equal_turn_goal_draw": 29,
+        "max_ply": 1
+      },
+      "score": 0.8662790697674418,
+      "wins": 134
+    },
+    {
+      "a": "iter082",
+      "b": "iter005",
+      "draws": 3,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_latest_champions_s64/games/163_iter082_vs_iter005.jsonl",
+      "losses": 6,
+      "reasons": {
+        "all_pieces_in_goal": 158,
+        "anti_block_goal_full": 11,
+        "equal_turn_goal_draw": 3
+      },
+      "score": 0.9563953488372093,
+      "wins": 163
+    },
+    {
+      "a": "iter082",
+      "b": "greedy",
+      "draws": 2,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_latest_champions_s64/games/164_iter082_vs_greedy.jsonl",
+      "losses": 5,
+      "reasons": {
+        "all_pieces_in_goal": 156,
+        "anti_block_goal_full": 14,
+        "equal_turn_goal_draw": 2
+      },
+      "score": 0.9651162790697675,
+      "wins": 165
+    },
+    {
+      "a": "iter082",
+      "b": "marblefish-ab",
+      "draws": 15,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_latest_champions_s64/games/165_iter082_vs_marblefish-ab.jsonl",
+      "losses": 7,
+      "reasons": {
+        "all_pieces_in_goal": 106,
+        "anti_block_goal_full": 51,
+        "equal_turn_goal_draw": 6,
+        "max_ply": 9
+      },
+      "score": 0.9156976744186046,
+      "wins": 150
+    },
+    {
+      "a": "iter082",
+      "b": "zedrichu-minimax",
+      "draws": 7,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_latest_champions_s64/games/166_iter082_vs_zedrichu-minimax.jsonl",
+      "losses": 9,
+      "reasons": {
+        "all_pieces_in_goal": 157,
+        "anti_block_goal_full": 8,
+        "equal_turn_goal_draw": 1,
+        "max_ply": 6
+      },
+      "score": 0.9273255813953488,
+      "wins": 156
+    },
+    {
+      "a": "iter082",
+      "b": "harryz-rule",
+      "draws": 99,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_latest_champions_s64/games/167_iter082_vs_harryz-rule.jsonl",
+      "losses": 0,
+      "reasons": {
+        "all_pieces_in_goal": 7,
+        "anti_block_goal_full": 66,
+        "max_ply": 99
+      },
+      "score": 0.7122093023255814,
+      "wins": 73
+    },
+    {
+      "a": "iter082",
+      "b": "traffic-greedy",
+      "draws": 9,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_latest_champions_s64/games/168_iter082_vs_traffic-greedy.jsonl",
+      "losses": 1,
+      "reasons": {
+        "all_pieces_in_goal": 101,
+        "anti_block_goal_full": 62,
+        "max_ply": 9
+      },
+      "score": 0.9680232558139535,
+      "wins": 162
+    },
+    {
+      "a": "iter082",
+      "b": "random",
+      "draws": 6,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_latest_champions_s64/games/169_iter082_vs_random.jsonl",
+      "losses": 0,
+      "reasons": {
+        "all_pieces_in_goal": 4,
+        "anti_block_goal_full": 162,
+        "max_ply": 6
+      },
+      "score": 0.9825581395348837,
+      "wins": 166
+    },
+    {
+      "a": "iter082",
+      "b": "iter064",
+      "draws": 27,
+      "games": 172,
+      "log": "experiments/public_benchmark/ladder_v2_latest_champions_s64/games/170_iter082_vs_iter064.jsonl",
+      "losses": 69,
+      "reasons": {
+        "all_pieces_in_goal": 145,
+        "equal_turn_goal_draw": 27
+      },
+      "score": 0.5203488372093024,
+      "wins": 76
+    }
+  ],
+  "protocol": {
+    "anchor": "random",
+    "anchor_elo": 0,
+    "draws": "half",
+    "max_plies": 240,
+    "movegen": "bitboard",
+    "neural_simulations": 64,
+    "pairs": "source ladder pairs reused, excluded labels dropped, latest champion pairs added",
+    "position_limit": null,
+    "positions": "benchmarks/ccerl-v1/positions/official_elo_v2.jsonl",
+    "rules": "strict",
+    "workers": 4
+  },
+  "schema": "ccerl.latest_champions_ladder.v1",
+  "source_ladder": "experiments/public_benchmark/ladder_v2_full_with_open_source_s64/baseline_ladder.json"
+}

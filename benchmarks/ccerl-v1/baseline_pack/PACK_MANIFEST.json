@@ -1,0 +1,36 @@
+{
+  "schema": "ccerl.baseline_pack.v1",
+  "ruleset": "CCERL-2P10-v1",
+  "rule_profile": "strict",
+  "created": "2026-05-20",
+  "status": "release-candidate",
+  "position_schedule": "benchmarks/ccerl-v1/positions/official_elo_v2.jsonl",
+  "baseline_manifest": "benchmarks/ccerl-v1/baselines.json",
+  "engines_manifest": "benchmarks/ccerl-v1/baseline_pack/engines.json",
+  "model_notes": "benchmarks/ccerl-v1/baseline_pack/MODEL_NOTES.md",
+  "model_release_terms": "benchmarks/ccerl-v1/baseline_pack/MODEL_RELEASE_TERMS.md",
+  "model_artifact_staging": "publish .ccpv checkpoints as release assets and restore them to the documented paths before neural-baseline runs",
+  "anchor": {
+    "label": "random",
+    "elo": 0
+  },
+  "champion": {
+    "label": "iter060",
+    "model": "experiments/fresh_selfplay_alpha/champions/iter_060_fresh_iter058_1p8m_epoch003/model.ccpv",
+    "previous_public_benchmark": {
+      "label": "iter057",
+      "model": "experiments/fresh_selfplay_alpha/champions/iter_057_fresh_iter056_endgame_deep_epoch004/model.ccpv"
+    }
+  },
+  "scripts": {
+    "smoke": "benchmarks/ccerl-v1/baseline_pack/run_smoke.sh",
+    "sample_ladder": "benchmarks/ccerl-v1/baseline_pack/run_ladder_sample.sh"
+  },
+  "current_calibration": {
+    "path": "experiments/public_benchmark/native_baseline_ladder_v2_allpairs_s704_limit12_iter060_suite_random0/baseline_ladder.json",
+    "runner_spotcheck": "experiments/public_benchmark/runner_spotcheck_v2_iter060_s64_limit2/runner_spotcheck.json",
+    "decisive_only_sensitivity": "experiments/public_benchmark/native_baseline_ladder_v2_allpairs_s704_limit12_iter060_suite_random0/elo_decisive_only.json",
+    "sprt_iter060_vs_iter057": "experiments/public_benchmark/native_baseline_ladder_v2_allpairs_s704_limit12_iter060_suite_random0/sprt_iter060_vs_iter057_elo0_0_elo1_25.json",
+    "champion_direct_match": "experiments/public_benchmark/champion_match_iter060_vs_iter057_s704_c24/champion_match.json"
+  }
+}

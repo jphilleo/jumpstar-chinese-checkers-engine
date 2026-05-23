@@ -1,0 +1,80 @@
+{
+  "anchor": "iter063_s64",
+  "anchor_elo": 0.0,
+  "draw_policy": "half",
+  "games": 688,
+  "log_likelihood": -205.56415383438255,
+  "players": 5,
+  "ratings": [
+    {
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "draws": 144,
+      "elo": 0.0,
+      "games": 688,
+      "losses": 11,
+      "player": "iter063_s64",
+      "score_rate": 0.8793604651162791,
+      "standard_error": 0.0,
+      "wins": 533
+    },
+    {
+      "ci95": [
+        -220.0430361560284,
+        -104.69713903870831
+      ],
+      "draws": 97,
+      "elo": -162.37008759736835,
+      "games": 172,
+      "losses": 75,
+      "player": "harryz-rule",
+      "score_rate": 0.2819767441860465,
+      "standard_error": 29.424973754418385,
+      "wins": 0
+    },
+    {
+      "ci95": [
+        -350.5843957837797,
+        -211.02123706542096
+      ],
+      "draws": 41,
+      "elo": -280.80281642460034,
+      "games": 172,
+      "losses": 123,
+      "player": "marblefish-ab",
+      "score_rate": 0.16569767441860464,
+      "standard_error": 35.60284661182622,
+      "wins": 8
+    },
+    {
+      "ci95": [
+        -717.9084701415374,
+        -435.65699998359116
+      ],
+      "draws": 6,
+      "elo": -576.7827350625643,
+      "games": 172,
+      "losses": 163,
+      "player": "zedrichu-minimax",
+      "score_rate": 0.03488372093023256,
+      "standard_error": 72.00292606070057,
+      "wins": 3
+    },
+    {
+      "ci95": [
+        -4156.888254968699,
+        -269.2489590306452
+      ],
+      "draws": 0,
+      "elo": -2213.068606999672,
+      "games": 172,
+      "losses": 172,
+      "player": "svjayanthi-mcts-fast",
+      "score_rate": 0.0,
+      "standard_error": 991.7447183515442,
+      "wins": 0
+    }
+  ]
+}

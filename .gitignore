@@ -1,0 +1,33 @@
+build/
+build-cmake/
+api/native/
+public/
+.venv*/
+.DS_Store
+__pycache__/
+.pytest_cache/
+*.pyc
+*.jsonl
+*.jsonl.gz
+!tests/fixtures/*.jsonl
+!benchmarks/ccerl-v1/positions/*.jsonl
+*.manifest.json
+*.npz
+*.pt
+*.ts
+*.ccpv
+*.ccpolicy
+*.tmp
+results.tsv
+run.log
+autoresearch*.log
+
+# Local training/evaluation runs can be very large. This public repo keeps only
+# curated benchmark summaries under experiments/public_benchmark.
+experiments/*
+!experiments/public_benchmark/
+experiments/public_benchmark/*
+!experiments/public_benchmark/ladder_v2_latest_champions_s64/
+!experiments/public_benchmark/champion_match_iter063_vs_iter060_s768_c24_v2/
+!experiments/public_benchmark/open_source_v2/
+.vercel
