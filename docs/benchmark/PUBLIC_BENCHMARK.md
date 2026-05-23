@@ -72,27 +72,27 @@ experiments/public_benchmark/ladder_v2_latest_champions_s64/baseline_ladder.json
 
 It uses all 86 audited v2 positions, paired color swaps, all 171 displayed-engine pairs, 29,412 games total, 64-simulation neural search, the existing native/CCP logs plus latest-champion incremental runs, and `random = 0`. Open-source adapter rows are fitted in the same all-pairs graph as every other displayed engine.
 
-| Rank | Baseline | Elo | Games | Score | vs JumpStar_60 | vs JumpStar_82 |
-|---:|---|---:|---:|---:|---:|---:|
-| 1 | `JumpStar_60` | 911 | 3,096 | 0.784 | - | 52-48-72 / 0.442 |
-| 2 | `JumpStar_82` | 900 | 3,096 | 0.775 | 72-48-52 / 0.558 | - |
-| 3 | `JumpStar_63` | 891 | 3,096 | 0.766 | 51-55-66 / 0.456 | 48-75-49 / 0.497 |
-| 4 | `JumpStar_64` | 888 | 3,096 | 0.764 | 94-19-59 / 0.602 | 69-27-76 / 0.480 |
-| 5 | `JumpStar_61` | 879 | 3,096 | 0.756 | 69-26-77 / 0.477 | 45-78-49 / 0.488 |
-| 6 | `JumpStar_62` | 873 | 3,096 | 0.750 | 49-44-79 / 0.413 | 79-44-49 / 0.587 |
-| 7 | `JumpStar_57` | 813 | 3,096 | 0.692 | 41-22-109 / 0.302 | 34-24-114 / 0.267 |
-| 8 | `tt-pvs` | 737 | 3,096 | 0.614 | 38-13-121 / 0.259 | 32-16-124 / 0.233 |
-| 9 | `JumpStar_46` | 684 | 3,096 | 0.558 | 22-10-140 / 0.157 | 19-37-116 / 0.218 |
-| 10 | `JumpStar_29` | 654 | 3,096 | 0.526 | 13-2-157 / 0.081 | 8-15-149 / 0.090 |
-| 11 | `JumpStar_9` | 516 | 3,096 | 0.382 | 9-4-159 / 0.064 | 8-30-134 / 0.134 |
-| 12 | `converter` | 511 | 3,096 | 0.376 | 8-0-164 / 0.047 | 6-4-162 / 0.047 |
-| 13 | `JumpStar_5` | 484 | 3,096 | 0.349 | 3-2-167 / 0.023 | 6-3-163 / 0.044 |
-| 14 | `greedy` | 481 | 3,096 | 0.346 | 5-3-164 / 0.038 | 5-2-165 / 0.035 |
-| 15 | `marblefish-ab` | 443 | 3,096 | 0.309 | 4-7-161 / 0.044 | 7-15-150 / 0.084 |
-| 16 | `harryz-rule` | 379 | 3,096 | 0.251 | 0-99-73 / 0.288 | 0-99-73 / 0.288 |
-| 17 | `zedrichu-minimax` | 370 | 3,096 | 0.244 | 5-7-160 / 0.049 | 9-7-156 / 0.073 |
-| 18 | `traffic-greedy` | 340 | 3,096 | 0.219 | 1-3-168 / 0.015 | 1-9-162 / 0.032 |
-| 19 | `random` | 0 | 3,096 | 0.040 | 0-7-165 / 0.020 | 0-6-166 / 0.017 |
+| Rank | Baseline | Elo | Games | Score |
+|---:|---|---:|---:|---:|
+| 1 | `JumpStar_60` | 911 | 3,096 | 0.784 |
+| 2 | `JumpStar_82` | 900 | 3,096 | 0.775 |
+| 3 | `JumpStar_63` | 891 | 3,096 | 0.766 |
+| 4 | `JumpStar_64` | 888 | 3,096 | 0.764 |
+| 5 | `JumpStar_61` | 879 | 3,096 | 0.756 |
+| 6 | `JumpStar_62` | 873 | 3,096 | 0.750 |
+| 7 | `JumpStar_57` | 813 | 3,096 | 0.692 |
+| 8 | `tt-pvs` | 737 | 3,096 | 0.614 |
+| 9 | `JumpStar_46` | 684 | 3,096 | 0.558 |
+| 10 | `JumpStar_29` | 654 | 3,096 | 0.526 |
+| 11 | `JumpStar_9` | 516 | 3,096 | 0.382 |
+| 12 | `converter` | 511 | 3,096 | 0.376 |
+| 13 | `JumpStar_5` | 484 | 3,096 | 0.349 |
+| 14 | `greedy` | 481 | 3,096 | 0.346 |
+| 15 | `marblefish-ab` | 443 | 3,096 | 0.309 |
+| 16 | `harryz-rule` | 379 | 3,096 | 0.251 |
+| 17 | `zedrichu-minimax` | 370 | 3,096 | 0.244 |
+| 18 | `traffic-greedy` | 340 | 3,096 | 0.219 |
+| 19 | `random` | 0 | 3,096 | 0.040 |
 
 Because top JumpStar checkpoints can be close in broad ladders, the champion
 call uses a promotion-grade direct match:
