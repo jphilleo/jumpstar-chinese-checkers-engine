@@ -1,0 +1,144 @@
+{
+  "anchor": {
+    "elo": 0,
+    "label": "random"
+  },
+  "baselines": [
+    {
+      "bot": "random",
+      "ccp_command": "python3 tools/ccp_cczero_bot.py --bot random --name random",
+      "family": "algorithmic",
+      "label": "random",
+      "role": "sanity-floor"
+    },
+    {
+      "bot": "greedy",
+      "ccp_command": "python3 tools/ccp_cczero_bot.py --bot greedy --name greedy",
+      "family": "algorithmic",
+      "label": "greedy",
+      "role": "simple-distance"
+    },
+    {
+      "bot": "traffic-greedy",
+      "ccp_command": "python3 tools/ccp_cczero_bot.py --bot traffic-greedy --name traffic-greedy",
+      "family": "algorithmic",
+      "label": "traffic-greedy",
+      "role": "handcrafted-traffic"
+    },
+    {
+      "bot": "converter",
+      "ccp_command": "python3 tools/ccp_cczero_bot.py --bot converter --name converter",
+      "family": "algorithmic",
+      "label": "converter",
+      "role": "classical-conversion"
+    },
+    {
+      "bot": "tt-pvs",
+      "ccp_command": "python3 tools/ccp_cczero_bot.py --bot tt-pvs --name tt-pvs",
+      "family": "algorithmic",
+      "label": "tt-pvs",
+      "role": "classical-search"
+    },
+    {
+      "ccp_command": "python3 tools/ccp_cczero_engine.py --model experiments/fresh_selfplay_alpha/champions/iter_005_effective_goal_v1/model.ccpv --name iter005 --simulations 768",
+      "family": "neural",
+      "label": "iter005",
+      "model": "experiments/fresh_selfplay_alpha/champions/iter_005_effective_goal_v1/model.ccpv",
+      "role": "historical-champion",
+      "simulations": 768
+    },
+    {
+      "ccp_command": "python3 tools/ccp_cczero_engine.py --model experiments/fresh_selfplay_alpha/champions/iter_009_fixed_batched_mcts/model.ccpv --name iter009 --simulations 768",
+      "family": "neural",
+      "label": "iter009",
+      "model": "experiments/fresh_selfplay_alpha/champions/iter_009_fixed_batched_mcts/model.ccpv",
+      "role": "historical-champion",
+      "simulations": 768
+    },
+    {
+      "ccp_command": "python3 tools/ccp_cczero_engine.py --model experiments/fresh_selfplay_alpha/champions/iter_029_merged768/model.ccpv --name iter029 --simulations 768",
+      "family": "neural",
+      "label": "iter029",
+      "model": "experiments/fresh_selfplay_alpha/champions/iter_029_merged768/model.ccpv",
+      "role": "historical-champion",
+      "simulations": 768
+    },
+    {
+      "ccp_command": "python3 tools/ccp_cczero_engine.py --model experiments/fresh_selfplay_alpha/champions/iter_046_value_weight_010/model.ccpv --name iter046 --simulations 768",
+      "family": "neural",
+      "label": "iter046",
+      "model": "experiments/fresh_selfplay_alpha/champions/iter_046_value_weight_010/model.ccpv",
+      "role": "historical-champion",
+      "simulations": 768
+    },
+    {
+      "ccp_command": "python3 tools/ccp_cczero_engine.py --model experiments/fresh_selfplay_alpha/champions/iter_057_fresh_iter056_endgame_deep_epoch004/model.ccpv --name iter057 --simulations 768",
+      "family": "neural",
+      "label": "iter057",
+      "model": "experiments/fresh_selfplay_alpha/champions/iter_057_fresh_iter056_endgame_deep_epoch004/model.ccpv",
+      "role": "historical-champion",
+      "simulations": 768
+    },
+    {
+      "ccp_command": "python3 tools/ccp_cczero_engine.py --model experiments/fresh_selfplay_alpha/champions/iter_060_fresh_iter058_1p8m_epoch003/model.ccpv --name iter060 --simulations 768",
+      "family": "neural",
+      "label": "iter060",
+      "model": "experiments/fresh_selfplay_alpha/champions/iter_060_fresh_iter058_1p8m_epoch003/model.ccpv",
+      "role": "historical-champion",
+      "simulations": 768
+    },
+    {
+      "ccp_command": "python3 tools/ccp_cczero_engine.py --model experiments/fresh_selfplay_alpha/champions/iter_061_fresh_iter060_1p8m_epoch003/model.ccpv --name iter061 --simulations 768",
+      "family": "neural",
+      "label": "iter061",
+      "model": "experiments/fresh_selfplay_alpha/champions/iter_061_fresh_iter060_1p8m_epoch003/model.ccpv",
+      "role": "historical-champion",
+      "simulations": 768
+    },
+    {
+      "ccp_command": "python3 tools/ccp_cczero_engine.py --model experiments/fresh_selfplay_alpha/champions/iter_062_fresh_iter061_1p8m_epoch003/model.ccpv --name iter062 --simulations 768",
+      "family": "neural",
+      "label": "iter062",
+      "model": "experiments/fresh_selfplay_alpha/champions/iter_062_fresh_iter061_1p8m_epoch003/model.ccpv",
+      "role": "historical-champion",
+      "simulations": 768
+    },
+    {
+      "ccp_command": "python3 tools/ccp_cczero_engine.py --model experiments/fresh_selfplay_alpha/champions/iter_063_fresh_iter061_1p8m_epoch004/model.ccpv --name iter063 --simulations 768",
+      "family": "neural",
+      "label": "iter063",
+      "model": "experiments/fresh_selfplay_alpha/champions/iter_063_fresh_iter061_1p8m_epoch004/model.ccpv",
+      "role": "champion-v2",
+      "simulations": 768
+    },
+    {
+      "ccp_command": "python3 tools/ccp_cczero_engine.py --model experiments/fresh_selfplay_alpha/champions/iter_064_fresh_iter063_1p8m_epoch004/model.ccpv --name iter064 --simulations 768",
+      "family": "neural",
+      "label": "iter064",
+      "model": "experiments/fresh_selfplay_alpha/champions/iter_064_fresh_iter063_1p8m_epoch004/model.ccpv",
+      "role": "historical-champion",
+      "simulations": 768
+    },
+    {
+      "ccp_command": "python3 tools/ccp_cczero_engine.py --model experiments/fresh_selfplay_alpha/champions/iter_082_iter64_finetune_2p5m_epoch004/model.ccpv --name iter082 --simulations 768",
+      "family": "neural",
+      "label": "iter082",
+      "model": "experiments/fresh_selfplay_alpha/champions/iter_082_iter64_finetune_2p5m_epoch004/model.ccpv",
+      "role": "current-training-champion",
+      "simulations": 768
+    }
+  ],
+  "champion": {
+    "ccp_command": "python3 tools/ccp_cczero_engine.py --model experiments/fresh_selfplay_alpha/champions/iter_082_iter64_finetune_2p5m_epoch004/model.ccpv --name iter082 --simulations 768",
+    "family": "neural",
+    "label": "iter082",
+    "model": "experiments/fresh_selfplay_alpha/champions/iter_082_iter64_finetune_2p5m_epoch004/model.ccpv",
+    "role": "current-training-champion",
+    "simulations": 768
+  },
+  "default_neural_simulations": 768,
+  "position_schedule": "benchmarks/ccerl-v1/positions/official_elo_v2.jsonl",
+  "rule_profile": "strict",
+  "ruleset": "CCERL-2P10-v2",
+  "schema": "ccerl.baselines.v2"
+}
