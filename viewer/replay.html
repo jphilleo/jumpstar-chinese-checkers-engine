@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>JumpStar Replay Viewer</title>
+  <link rel="stylesheet" href="replay.css">
+</head>
+<body>
+  <main class="app">
+    <header>
+      <div>
+        <p class="eyebrow">JumpStar / CCERL</p>
+        <h1>Replay Viewer</h1>
+      </div>
+      <div class="actions">
+        <button id="loadSample" type="button">Load sample</button>
+        <label class="file-button">
+          <input id="fileInput" type="file" accept=".jsonl,application/json">
+          Open JSONL
+        </label>
+      </div>
+    </header>
+
+    <section class="workspace" aria-label="Replay board and controls">
+      <div class="board-wrap">
+        <svg id="board" role="img" aria-label="Chinese Checkers board"></svg>
+      </div>
+
+      <aside class="panel">
+        <dl class="meta">
+          <div><dt>Players</dt><dd id="players">-</dd></div>
+          <div><dt>Rule profile</dt><dd id="rules">-</dd></div>
+          <div><dt>Status</dt><dd id="status">No game loaded</dd></div>
+        </dl>
+
+        <div class="controls">
+          <button id="prev" type="button" aria-label="Previous move">Prev</button>
+          <button id="play" type="button" aria-label="Play or pause">Play</button>
+          <button id="next" type="button" aria-label="Next move">Next</button>
+        </div>
+
+        <label class="slider-label" for="plySlider">
+          Ply <span id="plyText">0 / 0</span>
+        </label>
+        <input id="plySlider" type="range" min="0" max="0" value="0">
+
+        <div class="move-card">
+          <p class="eyebrow">Current move</p>
+          <p id="moveText">-</p>
+        </div>
+      </aside>
+    </section>
+  </main>
+
+  <script src="replay.js"></script>
+</body>
+</html>

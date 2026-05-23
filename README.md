@@ -78,6 +78,16 @@ External engines can implement CCP and be run through:
 python3 tools/ccbench.py referee-ccp --help
 ```
 
+## Replay Viewer
+
+A small static replay viewer is included at
+[viewer/replay.html](viewer/replay.html). It can load the included sample game or
+any JSONL produced by:
+
+```sh
+./build/cczero match --rules strict --p0 greedy --p1 random --seed 7 --max-plies 80 --log build/game.jsonl
+```
+
 ## Model Artifacts
 
 The public repository records exact model labels, paths, sizes, and hashes used
@@ -91,4 +101,3 @@ Release assets and restored to the paths documented in
 No open-source license has been selected yet. Until a license is added, this
 source is public for inspection and reproducibility but is not broadly licensed
 for reuse or redistribution.
-
