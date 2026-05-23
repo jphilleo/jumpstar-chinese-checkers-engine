@@ -1,11 +1,12 @@
 # JumpStar Chinese Checkers Engine
 
 This is the public engine and benchmark repository for JumpStar, a
-self-play-trained Chinese Checkers AI. As of the public launch on **2026-05-23**,
-`JumpStar_60` is, to the best of this project's public evidence, the strongest
-openly documented Chinese Checkers AI engine under the `CCERL-2P10-v2`
-benchmark. That claim is benchmark-scoped: stronger private engines may exist,
-and CCERL is designed so public challengers can test the result.
+self-play-trained Chinese Checkers AI created by **Joe Philleo**. As of the
+public launch on **2026-05-23**, `JumpStar_60` is, to the best of this project's
+public evidence, the strongest openly documented Chinese Checkers AI engine
+under the `CCERL-2P10-v2` benchmark. That claim is benchmark-scoped: stronger
+private engines may exist, and CCERL is designed so public challengers can test
+the result.
 
 This repository intentionally contains only the public research surface:
 
@@ -14,6 +15,7 @@ This repository intentionally contains only the public research surface:
 - the CCERL benchmark rules, protocol, positions, and baseline definitions
 - public leaderboard and direct-match evidence
 - a small benchmark runner/tool subset
+- a lightweight static replay viewer
 
 It does not contain the hosted website, Vercel deployment code, private training
 automation, or internal experiment workspaces.
@@ -98,6 +100,8 @@ Release assets and restored to the paths documented in
 
 ## License
 
-No open-source license has been selected yet. Until a license is added, this
-source is public for inspection and reproducibility but is not broadly licensed
-for reuse or redistribution.
+This repository is open source under the [MIT License](LICENSE).
+
+Model checkpoints are not stored in Git history. If model files are published as
+release assets later, their download page should state whether the same license
+or separate model-artifact terms apply.
