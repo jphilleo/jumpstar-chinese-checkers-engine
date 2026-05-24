@@ -100,8 +100,8 @@ Release assets and restored to the paths documented in
 
 ## License
 
-This repository is licensed under Creative Commons Attribution 4.0 International
-(`CC BY 4.0`). See [LICENSE](LICENSE).
+This repository is licensed under Creative Commons Attribution-NonCommercial 4.0 International
+(`CC BY-NC 4.0`). See [LICENSE](LICENSE).
 
 Model checkpoints are not stored in Git history. If model files are published as
 release assets later, their download page should state whether the same license
